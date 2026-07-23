@@ -142,6 +142,68 @@
     ]
   },
   {
+    "id": "article-header",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "author_image",
+        "label": "Author Profile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author_name",
+        "label": "Author Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "author_date",
+        "label": "Date"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "save_label",
+        "label": "Save Label",
+        "value": "Save"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "share_label",
+        "label": "Share Label",
+        "value": "Share"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "share_facebook",
+        "label": "Facebook Share URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "share_x",
+        "label": "X Share URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "share_linkedin",
+        "label": "LinkedIn Share URL"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {

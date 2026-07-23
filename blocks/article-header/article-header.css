@@ -1,0 +1,157 @@
+.article-header .module-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-header .module-block {
+  position: relative;
+}
+
+/* Share label + icons: horizontal row above the title on mobile/tablet */
+.article-header .module-block-side-vertical {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.article-header .module-block-side-vertical-heading {
+  display: none;
+  font-size: 0.875em;
+  line-height: 1.857em;
+  font-weight: 700;
+  color: #979797;
+}
+
+.article-header .media-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article-header .media-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #979797;
+  transition: opacity 0.3s;
+}
+
+.article-header .media-list-link:hover {
+  opacity: 0.7;
+}
+
+.article-header .media-list-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.article-header .module-block-title {
+  margin: 0 0 24px;
+  font-size: var(--heading-font-size-xxl);
+  color: var(--text-color);
+}
+
+.article-header .module-block-heading-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.article-header .module-block-author-img-container {
+  flex-shrink: 0;
+}
+
+.article-header .module-block-author-img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.article-header .module-block-info-detail {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.article-header .module-block-author-name {
+  font-size: 0.875em;
+  line-height: 1.214em;
+  font-weight: 700;
+  color: #008787;
+}
+
+.article-header .module-block-date {
+  font-size: 0.875em;
+  line-height: 1.214em;
+  font-style: normal;
+  color: #979797;
+  margin: 0;
+}
+
+.article-header .module-block-save-btn {
+  display: none;
+  margin-left: auto;
+}
+
+.article-header .simple-icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.875em;
+  line-height: 1.214em;
+  font-weight: 700;
+  color: #979797;
+  transition: opacity 0.3s;
+}
+
+.article-header .simple-icon-btn:hover {
+  opacity: 0.7;
+}
+
+.article-header .simple-icon-btn-icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (width >= 600px) {
+  .article-header .module-block-save-btn {
+    display: block;
+  }
+}
+
+@media (width >= 1200px) {
+  .article-header .module-block-side-vertical {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+    transform: translateX(-6em);
+  }
+
+  .article-header .module-block-side-vertical-heading {
+    display: block;
+  }
+
+  .article-header .media-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
