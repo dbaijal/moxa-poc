@@ -1,6 +1,6 @@
 .article-header .module-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 .article-header .module-block {
@@ -60,6 +60,7 @@
   margin: 0 0 24px;
   font-size: var(--heading-font-size-xxl);
   color: var(--text-color);
+  font-weight: 400;
 }
 
 .article-header .module-block-heading-info {
