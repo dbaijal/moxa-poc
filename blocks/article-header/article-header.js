@@ -81,6 +81,10 @@ export default function decorate(block) {
   const dotEl = document.createElement('span');
   dotEl.className = 'module-block-date';
   dotEl.textContent = '•';
+
+  console.log(`[date]`, date);
+  
+  
   const dateEl = document.createElement('span');
   dateEl.className = 'module-block-date';
   dateEl.textContent = date;

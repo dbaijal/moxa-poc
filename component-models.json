@@ -153,20 +153,20 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "author_image",
+        "name": "authorImage",
         "label": "Author Profile Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "author_name",
+        "name": "authorName",
         "label": "Author Name"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "author_date",
+        "name": "authorDate",
         "label": "Date"
       },
       {
