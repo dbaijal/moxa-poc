@@ -60,7 +60,7 @@
 
 .related-articles .img-card-info {
   min-height: 2em;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .related-articles .img-card-date {
@@ -78,7 +78,7 @@
 
 .related-articles .img-card-paragraph {
   margin: 0;
-  font-size: 0.875em;
+  font-size: 14px;
   line-height: 1.428em;
   color: #484848;
 }
