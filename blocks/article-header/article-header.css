@@ -36,8 +36,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #979797;
   transition: opacity 0.3s;
@@ -50,6 +50,10 @@
 .article-header .media-list-icon {
   width: 18px;
   height: 18px;
+
+  img {
+    vertical-align: top;
+  }
 }
 
 .article-header .module-block-title {
