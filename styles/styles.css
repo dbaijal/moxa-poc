@@ -142,10 +142,6 @@ pre {
   white-space: pre;
 }
 
-main > div {
-  margin: 40px 16px;
-}
-
 input,
 textarea,
 select,
@@ -297,8 +293,6 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
-
   &.article {
     padding: 0 20px;
     max-width: 968px;
@@ -316,24 +310,23 @@ main > .section {
     p, ul {
       margin: 40px 0;
     }
+
+    .default-content-wrapper {
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
 main > .section > div {
-  max-width: 1200px;
   margin: auto;
-  padding: 0 24px;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
-  }
-}
 
 /* section metadata */
 main .section.light,
