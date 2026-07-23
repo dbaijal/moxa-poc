@@ -24,11 +24,17 @@
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   button {
     border: none;
     background-color: transparent;
+    border-bottom: 4px solid transparent;
+
+    &.is-active {
+      border-color: #008787;
+    }
   }
 }
 
@@ -759,12 +765,13 @@
   padding: 1rem 1.5rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
+  background-color: #fff;
 }
 
 .follow-btn-container .info-btn {
   padding: 1rem;
-  color: #717171
+  color: #717171;
 }
 
 .follow-btn-container .info-btn:hover {
@@ -894,15 +901,13 @@
 }
 
 .border-table td:before,
-.main-section__block:before,
-.side-section:before {
+.main-section__block:before {
   content: '';
   display: table
 }
 
 .border-table td:after,
-.main-section__block:after,
-.side-section:after {
+.main-section__block:after {
   content: '';
   display: table;
   clear: both
@@ -2306,6 +2311,16 @@
 
   &.is-active {
     display: block;
+  }
+
+  .side-section {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+
+    .side-section__side {
+      min-width: 220px;
+    }
   }
 }
 

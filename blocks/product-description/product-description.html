@@ -482,17 +482,12 @@
         <div class="tab-section__top">
           <div class="container">
             <div class="flex-between">
-              <div
-                class="tab-section__underline"
-              >
-                &nbsp;
-              </div>
               <ul class="tab-section__tabs">
                 <li
                   class="tab-section__tab"
                 >
                   <button
-                    class="tab-section__btn"
+                    class="tab-section__btn is-active"
                     data-tab-id="overview"
                     type="button"
                   >
@@ -524,7 +519,7 @@
                   class="tab-section__tab"
                 >
                   <button
-                    class="tab-section__btn is-active"
+                    class="tab-section__btn"
                     data-tab-id="resources"
                     type="button"
                   >
@@ -570,7 +565,7 @@
         <div class="tab-section__body">
           <div class="container">
             <div
-              class="tab-section__main"
+              class="tab-section__main is-active"
               data-tab="overview"
             >
               <div class="side-section">
@@ -735,7 +730,7 @@
             </div>
 
             <div
-              class="tab-section__main is-active"
+              class="tab-section__main"
               data-tab="specifications"
             >
               <div class="side-section">
@@ -2265,5 +2260,11 @@
         </div>
       </section>
     </div>
+
+    <script type="module">
+      import decorate from './product-description.js';
+
+      decorate(document.querySelector('.product-description'));
+    </script>
   </body>
 </html>
