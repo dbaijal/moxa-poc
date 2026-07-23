@@ -280,5 +280,17 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "related-articles",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "More Articles"
+      }
+    ]
   }
 ]
