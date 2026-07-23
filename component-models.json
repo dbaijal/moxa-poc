@@ -172,33 +172,33 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "save_label",
+        "name": "saveLabel",
         "label": "Save Label",
         "value": "Save"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "share_label",
+        "name": "shareLabel",
         "label": "Share Label",
         "value": "Share"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "share_facebook",
+        "name": "shareFacebook",
         "label": "Facebook Share URL"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "share_x",
+        "name": "shareX",
         "label": "X Share URL"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "share_linkedin",
+        "name": "shareLinkedin",
         "label": "LinkedIn Share URL"
       }
     ]
