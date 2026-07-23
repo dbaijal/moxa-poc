@@ -1,0 +1,28 @@
+{
+  "total": 3,
+  "offset": 0,
+  "limit": 3,
+  "data": [
+    {
+      "title": "An SI’s Fast Pass to OT Network Resilience: Overcoming 3 Major Brownfield Challenges",
+      "date": "Jul 20, 2026",
+      "description": "Looking for secure, reliable solutions for your OT integration projects? Discover your fast pass to building resilient networks today.",
+      "image": "https://cdn-cms-frontdoor-dfc8ebanh6bkb3hs.a02.azurefd.net/Moxa/media/Article/2026/Article_SI_Image_910x400_Secure_Networking.jpg?ext=.jpg",
+      "path": "/en/articles/si-fast-pass-to-ot-network-resilience"
+    },
+    {
+      "title": "Rail Security: Build for Compliance, Go Beyond for Resilience",
+      "date": "May 29, 2026",
+      "description": "With rail security compliance in practice for years, the more urgent question is now: \"Is your system resilient?\" The future of rail security will depend on 3 key factors to build resilience.",
+      "image": "https://cdn-cms-frontdoor-dfc8ebanh6bkb3hs.a02.azurefd.net/getmedia/5cbb5c60-a19f-4d3d-8f2d-3a9ff343e606/Article_202605_Rail-From-Compliance-to-Resilience_1?width=360&height=173&ext=.png",
+      "path": "/en/articles/rail-security-build-for-compliance-go-beyond-for-resilience"
+    },
+    {
+      "title": "Bridging the Legacy Gap: Engineering the AI Factory for the Generative Era",
+      "date": "May 29, 2026",
+      "description": "Transform legacy data centers into AI factories by bridging the OT/IT gap with real-time telemetry, secure connectivity, and millisecond redundancy.",
+      "image": "https://cdn-cms-frontdoor-dfc8ebanh6bkb3hs.a02.azurefd.net/Moxa/media/Article/2026/Bridging-the-Legacy-Gap_910x400.jpg?ext=.jpg",
+      "path": "/en/articles/engineering-the-ai-factory-for-the-generative-era"
+    }
+  ]
+}

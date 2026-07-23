@@ -136,8 +136,74 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Article",
+            "value": "article"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "article-header",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "authorImage",
+        "label": "Author Profile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "authorName",
+        "label": "Author Name"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "authorDate",
+        "label": "Date"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "saveLabel",
+        "label": "Save Label",
+        "value": "Save"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "shareLabel",
+        "label": "Share Label",
+        "value": "Share"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "shareFacebook",
+        "label": "Facebook Share URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "shareX",
+        "label": "X Share URL"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "shareLinkedin",
+        "label": "LinkedIn Share URL"
       }
     ]
   },
@@ -212,6 +278,18 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "related-articles",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "More Articles"
       }
     ]
   }
