@@ -33,6 +33,13 @@
         "valueType": "string",
         "name": "publishDate",
         "label": "Publish Date"
+      },
+      {
+        "component": "aem-tag",
+        "valueType": "string",
+        "name": "articleTags",
+        "label": "Article Tags",
+        "multi": true
       }
     ]
   },
