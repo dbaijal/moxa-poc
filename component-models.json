@@ -326,6 +326,39 @@
     ]
   },
   {
+    "id": "product-viewer",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "features",
+        "label": "Features and Advantages",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "images",
+        "label": "Product Images",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "certificationHeading",
+        "label": "Certification Heading",
+        "value": "Certification"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "certificationImages",
+        "label": "Certification Images",
+        "multi": true
+      }
+    ]
+  },
+  {
     "id": "related-articles",
     "fields": [
       {
