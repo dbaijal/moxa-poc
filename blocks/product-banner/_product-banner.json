@@ -31,6 +31,13 @@
           "valueType": "string",
           "name": "subheading",
           "label": "Subheading"
+        },
+        {
+          "component": "richtext",
+          "name": "content_description",
+          "value": "",
+          "label": "Description",
+          "valueType": "string"
         }
       ]
     }
