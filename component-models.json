@@ -327,6 +327,13 @@
         "name": "title",
         "label": "Title",
         "value": "More Articles"
+      },
+      {
+        "component": "aem-tag",
+        "name": "tags",
+        "label": "Show articles tagged",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags/moxa-tag"
       }
     ]
   }
