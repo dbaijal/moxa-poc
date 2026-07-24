@@ -39,7 +39,8 @@
         "valueType": "string",
         "name": "articleTags",
         "label": "Article Tags",
-        "multi": true
+        "multi": true,
+        "rootPath": "/content/cq:tags/moxa-tag"
       }
     ]
   },
