@@ -96,10 +96,19 @@ function buildCard(item) {
   return card;
 }
 
+function readSelectedTags(tagsRow) {
+  if (!tagsRow) return [];
+  const items = [...tagsRow.querySelectorAll('li')];
+  if (items.length) {
+    return items.map((li) => li.textContent.trim()).filter(Boolean);
+  }
+  return parseTags(tagsRow.textContent);
+}
+
 export default async function decorate(block) {
   const [titleRow, tagsRow] = block.children;
   const title = titleRow ? titleRow.textContent.trim() : 'More Articles';
-  const selectedTags = parseTags(tagsRow ? tagsRow.textContent : '');
+  const selectedTags = readSelectedTags(tagsRow);
 
   const heading = document.createElement('h2');
   heading.className = 'main-section-heading';
