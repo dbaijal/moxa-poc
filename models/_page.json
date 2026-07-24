@@ -34,6 +34,13 @@
           "valueType": "string",
           "name": "publishDate",
           "label": "Publish Date"
+        },
+        {
+          "component": "aem-tag",
+          "name": "articleTags",
+          "label": "Article Tags",
+          "valueType": "string",
+          "rootPath": "/content/cq:tags/moxa-tag"
         }
       ]
     }

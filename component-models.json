@@ -33,6 +33,13 @@
         "valueType": "string",
         "name": "publishDate",
         "label": "Publish Date"
+      },
+      {
+        "component": "aem-tag",
+        "name": "articleTags",
+        "label": "Article Tags",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags/moxa-tag"
       }
     ]
   },
@@ -327,6 +334,13 @@
         "name": "title",
         "label": "Title",
         "value": "More Articles"
+      },
+      {
+        "component": "aem-tag",
+        "name": "tags",
+        "label": "Show articles tagged",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags/moxa-tag"
       }
     ]
   }
