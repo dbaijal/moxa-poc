@@ -295,6 +295,23 @@
     ]
   },
   {
+    "id": "product-banner",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subheading",
+        "label": "Subheading"
+      }
+    ]
+  },
+  {
     "id": "related-articles",
     "fields": [
       {
