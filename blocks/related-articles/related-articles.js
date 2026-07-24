@@ -123,6 +123,8 @@ export default async function decorate(block) {
 
   block.replaceChildren(container);
 
+  if (!selectedTags.length) return;
+
   const resp = await fetch(ARTICLES_INDEX);
   if (!resp.ok) return;
   const { data } = await resp.json();
@@ -131,7 +133,6 @@ export default async function decorate(block) {
   const items = data
     .filter((item) => item.path !== currentPath)
     .filter((item) => {
-      if (!selectedTags.length) return true;
       const itemTags = parseTags(item.articleTags);
       return selectedTags.some((tag) => itemTags.includes(tag));
     })
