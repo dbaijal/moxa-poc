@@ -61,7 +61,8 @@
         "product-viewer",
         "hero-banner",
         "page-navigation",
-        "video-teaser"
+        "video-teaser",
+        "overview-accordion"
       ]
     }
   ]
