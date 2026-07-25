@@ -35,14 +35,15 @@ function buildMain(row) {
   const img = cellImage(imageCell);
   if (img) imageWrap.append(img);
 
-  const top = document.createElement('div');
-  moveInstrumentation(row, top);
-  top.append(content, imageWrap);
+  const li = document.createElement('li');
+  li.className = 'icon-list__item';
+  moveInstrumentation(row, li);
+  li.append(content, imageWrap);
 
-  return top;
+  return li;
 }
 
-function buildAccordionItem(row, isActive) {
+function buildAccordionItem(row) {
   const [headingCell, descriptionCell, imageCell] = row.children;
 
   const title = document.createElement('p');
@@ -64,22 +65,17 @@ function buildAccordionItem(row, isActive) {
   body.className = 'seven-four-col hide';
   body.append(largeCol, smallCol);
 
-  const accordion = document.createElement('div');
-  accordion.className = 'icon-list__accordion';
-  moveInstrumentation(row, accordion);
-
-  if (isActive) {
-    accordion.classList.add('is-active');
-    body.classList.remove('hide');
-  }
+  const li = document.createElement('li');
+  li.className = 'icon-list__accordion';
+  moveInstrumentation(row, li);
 
   title.addEventListener('click', () => {
-    const active = accordion.classList.toggle('is-active');
+    const active = li.classList.toggle('is-active');
     body.classList.toggle('hide', !active);
   });
 
-  accordion.append(title, body);
-  return accordion;
+  li.append(title, body);
+  return li;
 }
 
 /**
@@ -90,18 +86,10 @@ export default async function decorate(block) {
   const [mainRow, ...itemRows] = block.children;
   if (!mainRow) return;
 
-  const top = buildMain(mainRow);
-
-  const accordionWrap = document.createElement('div');
-  itemRows.forEach((row, i) => accordionWrap.append(buildAccordionItem(row, i === 0)));
-
-  const li = document.createElement('li');
-  li.className = 'icon-list__item';
-  li.append(top, accordionWrap);
-
   const list = document.createElement('ul');
   list.className = 'icon-list';
-  list.append(li);
+  list.append(buildMain(mainRow));
+  itemRows.forEach((row) => list.append(buildAccordionItem(row)));
 
   block.replaceChildren(list);
 }
