@@ -328,57 +328,6 @@
     ]
   },
   {
-    "id": "overview-accordion",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "mainHeading",
-        "label": "Main Title"
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "mainDescription",
-        "label": "Main Description",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "mainImage",
-        "label": "Main Image",
-        "multi": false
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "heading",
-        "label": "Heading",
-        "description": "The first item in the block becomes the main heading; every item after it becomes a collapsible accordion row."
-      },
-      {
-        "component": "richtext",
-        "valueType": "string",
-        "name": "content",
-        "label": "Content",
-        "value": ""
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      }
-    ]
-  },
-  {
     "id": "navigation-link",
     "fields": [
       {

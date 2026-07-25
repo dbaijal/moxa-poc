@@ -22,8 +22,7 @@
       "product-viewer",
       "hero-banner",
       "page-navigation",
-      "video-teaser",
-      "overview-accordion"
+      "video-teaser"
     ]
   },
   {
@@ -45,12 +44,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "overview-accordion",
-    "components": [
-      "accordion-item"
     ]
   },
   {
