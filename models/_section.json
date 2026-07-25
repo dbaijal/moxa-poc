@@ -60,7 +60,9 @@
         "product-banner",
         "product-viewer",
         "hero-banner",
-        "page-navigation"
+        "page-navigation",
+        "video-teaser",
+        "overview-accordion"
       ]
     }
   ]

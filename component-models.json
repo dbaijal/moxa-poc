@@ -328,6 +328,56 @@
     ]
   },
   {
+    "id": "overview-accordion",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mainHeading",
+        "label": "Main Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "mainDescription",
+        "label": "Main Description",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "mainImage",
+        "label": "Main Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "itemHeading",
+        "label": "Accordion Item Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "itemContent",
+        "label": "Accordion Item Content",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "itemImage",
+        "label": "Accordion Item Image",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "navigation-link",
     "fields": [
       {
@@ -423,6 +473,31 @@
         "label": "Show articles tagged",
         "valueType": "string",
         "rootPath": "/content/cq:tags/moxa-tag"
+      }
+    ]
+  },
+  {
+    "id": "video-teaser",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "Unlock Real-time Data Monitoring With Remote I/O"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "youtubeUrl",
+        "label": "YouTube URL"
       }
     ]
   }
