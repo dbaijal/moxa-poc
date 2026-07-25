@@ -328,13 +328,14 @@
     ]
   },
   {
-    "id": "overview-accordion",
+    "id": "accordion-item",
     "fields": [
       {
         "component": "text",
         "valueType": "string",
         "name": "heading",
-        "label": "Title"
+        "label": "Heading",
+        "description": "The first item added to the block becomes the main heading; every item after it becomes a collapsible accordion row."
       },
       {
         "component": "richtext",
@@ -349,34 +350,6 @@
         "name": "image",
         "label": "Image",
         "multi": false
-      },
-      {
-        "component": "container",
-        "name": "items",
-        "label": "Accordion Items",
-        "multi": true,
-        "fields": [
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "itemHeading",
-            "label": "Title"
-          },
-          {
-            "component": "richtext",
-            "valueType": "string",
-            "name": "itemDescription",
-            "label": "Description",
-            "value": ""
-          },
-          {
-            "component": "reference",
-            "valueType": "string",
-            "name": "itemImage",
-            "label": "Image",
-            "multi": false
-          }
-        ]
       }
     ]
   },

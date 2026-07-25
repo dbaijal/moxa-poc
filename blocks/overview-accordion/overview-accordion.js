@@ -1,86 +1,64 @@
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-const HEADING_RE = /^H[1-6]$/;
-
-// The "items" model field is an xwalk container field with multi:true, which
-// AEM renders as a flat run of elements (one heading/paragraph/picture per
-// field) with an <hr> separating each repeated group. Group children back
-// into logical rows by splitting on those <hr> boundaries, then pick each
-// row's heading/paragraph/image generically (rather than relying on a fixed
-// row/cell shape) since a container field's exact markup isn't something we
-// can fabricate a reliable local test fixture for.
-function groupByHr(children) {
-  const groups = [[]];
-  children.forEach((el) => {
-    if (el.tagName === 'HR') {
-      groups.push([]);
-    } else {
-      groups[groups.length - 1].push(el);
-    }
-  });
-  return groups.filter((group) => group.length > 0);
+function cellText(cell) {
+  return cell ? cell.textContent.trim() : '';
 }
 
-function pickImage(group) {
-  return group.reduce((found, el) => {
-    if (found) return found;
-    if (el.tagName === 'IMG') return el;
-    return el.querySelector?.('img') || null;
-  }, null);
+function cellImage(cell) {
+  const existing = cell?.querySelector('img');
+  if (existing) return existing;
+  const src = cellText(cell);
+  if (!src) return null;
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = '';
+  return img;
 }
 
-function pickHeading(group) {
-  return group.find((el) => HEADING_RE.test(el.tagName));
-}
+function buildMain(row) {
+  const [headingCell, descriptionCell, imageCell] = row.children;
 
-function extractGroup(group) {
-  const heading = pickHeading(group);
-  const description = group.filter((el) => el !== heading && el.tagName !== 'PICTURE' && el.tagName !== 'IMG');
-  return {
-    heading: heading?.textContent.trim() || '',
-    description,
-    image: pickImage(group),
-  };
-}
+  const heading = document.createElement('h3');
+  heading.className = 'icon-list__heading';
+  heading.textContent = cellText(headingCell);
 
-function buildMain(group) {
-  const { heading, description, image } = extractGroup(group);
-
-  const headingEl = document.createElement('h3');
-  headingEl.className = 'icon-list__heading';
-  headingEl.textContent = heading;
-
-  const subheadingEl = document.createElement('h4');
-  subheadingEl.className = 'icon-list__subheading';
-  subheadingEl.textContent = description.map((el) => el.textContent.trim()).join(' ');
+  const subheading = document.createElement('h4');
+  subheading.className = 'icon-list__subheading';
+  subheading.textContent = cellText(descriptionCell);
 
   const content = document.createElement('div');
   content.className = 'icon-list__content';
-  content.append(headingEl, subheadingEl);
+  content.append(heading, subheading);
 
   const imageWrap = document.createElement('div');
   imageWrap.className = 'icon-list__image';
-  if (image) imageWrap.append(image);
+  const img = cellImage(imageCell);
+  if (img) imageWrap.append(img);
 
   const top = document.createElement('div');
+  moveInstrumentation(row, top);
   top.append(content, imageWrap);
+
   return top;
 }
 
-function buildAccordionItem(group, isActive) {
-  const { heading, description, image } = extractGroup(group);
+function buildAccordionItem(row, isActive) {
+  const [headingCell, descriptionCell, imageCell] = row.children;
 
   const title = document.createElement('p');
   title.className = 'icon-list__subheading icon';
-  title.textContent = heading;
+  title.textContent = cellText(headingCell);
 
   const largeCol = document.createElement('div');
   largeCol.className = 'seven-four-col__large';
-  description.forEach((el) => largeCol.append(el));
+  while (descriptionCell?.firstElementChild) {
+    largeCol.append(descriptionCell.firstElementChild);
+  }
 
   const smallCol = document.createElement('div');
   smallCol.className = 'seven-four-col__small';
-  if (image) smallCol.append(image);
+  const img = cellImage(imageCell);
+  if (img) smallCol.append(img);
 
   const body = document.createElement('div');
   body.className = 'seven-four-col hide';
@@ -88,6 +66,7 @@ function buildAccordionItem(group, isActive) {
 
   const accordion = document.createElement('div');
   accordion.className = 'icon-list__accordion';
+  moveInstrumentation(row, accordion);
 
   if (isActive) {
     accordion.classList.add('is-active');
@@ -108,15 +87,13 @@ function buildAccordionItem(group, isActive) {
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
-  const groups = groupByHr([...block.children]);
-  const [mainGroup, ...itemGroups] = groups;
-  if (!mainGroup) return;
+  const [mainRow, ...itemRows] = block.children;
+  if (!mainRow) return;
 
-  const top = buildMain(mainGroup);
-  moveInstrumentation(block, top);
+  const top = buildMain(mainRow);
 
   const accordionWrap = document.createElement('div');
-  itemGroups.forEach((group, i) => accordionWrap.append(buildAccordionItem(group, i === 0)));
+  itemRows.forEach((row, i) => accordionWrap.append(buildAccordionItem(row, i === 0)));
 
   const li = document.createElement('li');
   li.className = 'icon-list__item';

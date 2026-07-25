@@ -48,6 +48,12 @@
     ]
   },
   {
+    "id": "overview-accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
     "id": "page-navigation",
     "components": [
       "navigation-link"
