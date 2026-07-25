@@ -1,3 +1,5 @@
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 function cellText(cell) {
   return cell ? cell.textContent.trim() : '';
 }
@@ -38,6 +40,7 @@ export default async function decorate(block) {
 
     const li = document.createElement('li');
     li.className = 'page-nav__item';
+    moveInstrumentation(row, li);
     if (href && isCurrentLink(href)) li.classList.add('is-current');
     li.append(anchor);
 
