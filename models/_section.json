@@ -58,7 +58,9 @@
         "article-header",
         "related-articles",
         "product-banner",
-        "product-viewer"
+        "product-viewer",
+        "hero-banner",
+        "secondary-navigation"
       ]
     }
   ]
