@@ -59,7 +59,8 @@
         "related-articles",
         "product-banner",
         "product-viewer",
-        "hero-banner"
+        "hero-banner",
+        "page-navigation"
       ]
     }
   ]

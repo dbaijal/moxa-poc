@@ -328,6 +328,29 @@
     ]
   },
   {
+    "id": "navigation-link",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "text",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "style",
+        "label": "Style (leave blank, or enter \"highlight\")",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "product-banner",
     "fields": [
       {
