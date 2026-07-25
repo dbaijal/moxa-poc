@@ -328,6 +328,37 @@
     ]
   },
   {
+    "id": "nav-link",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Highlight",
+            "value": "highlight"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "product-banner",
     "fields": [
       {
@@ -400,37 +431,6 @@
         "label": "Show articles tagged",
         "valueType": "string",
         "rootPath": "/content/cq:tags/moxa-tag"
-      }
-    ]
-  },
-  {
-    "id": "nav-link",
-    "fields": [
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "linkText",
-        "label": "Text"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "Type",
-        "options": [
-          {
-            "name": "Default",
-            "value": ""
-          },
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
       }
     ]
   }

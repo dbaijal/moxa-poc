@@ -46,7 +46,7 @@
     ]
   },
   {
-    "id": "secondary-navigation",
+    "id": "page-navigation",
     "components": [
       "nav-link"
     ]
