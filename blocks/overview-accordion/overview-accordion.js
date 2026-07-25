@@ -15,12 +15,39 @@ function cellImage(cell) {
   return img;
 }
 
+function buildMain(row) {
+  const [headingCell, contentCell, imageCell] = row.children;
+
+  const heading = document.createElement('h3');
+  heading.className = 'icon-list__heading';
+  heading.textContent = cellText(headingCell);
+
+  const subheading = document.createElement('h4');
+  subheading.className = 'icon-list__subheading';
+  subheading.textContent = cellText(contentCell);
+
+  const content = document.createElement('div');
+  content.className = 'icon-list__content';
+  content.append(heading, subheading);
+
+  const imageWrap = document.createElement('div');
+  imageWrap.className = 'icon-list__image';
+  const img = cellImage(imageCell);
+  if (img) imageWrap.append(img);
+
+  const top = document.createElement('div');
+  moveInstrumentation(row, top);
+  top.append(content, imageWrap);
+
+  return top;
+}
+
 function buildAccordionItem(row, isActive) {
-  const [titleCell, contentCell, imageCell] = row.children;
+  const [headingCell, contentCell, imageCell] = row.children;
 
   const title = document.createElement('p');
   title.className = 'icon-list__subheading icon';
-  title.textContent = cellText(titleCell);
+  title.textContent = cellText(headingCell);
 
   const largeCol = document.createElement('div');
   largeCol.className = 'seven-four-col__large';
@@ -60,27 +87,10 @@ function buildAccordionItem(row, isActive) {
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
-  const [mainTitleRow, mainDescriptionRow, mainImageRow, ...itemRows] = block.children;
+  const [mainRow, ...itemRows] = block.children;
+  if (!mainRow) return;
 
-  const heading = document.createElement('h3');
-  heading.className = 'icon-list__heading';
-  heading.textContent = cellText(mainTitleRow);
-
-  const subheading = document.createElement('h4');
-  subheading.className = 'icon-list__subheading';
-  subheading.textContent = cellText(mainDescriptionRow);
-
-  const content = document.createElement('div');
-  content.className = 'icon-list__content';
-  content.append(heading, subheading);
-
-  const imageWrap = document.createElement('div');
-  imageWrap.className = 'icon-list__image';
-  const mainImg = cellImage(mainImageRow?.firstElementChild);
-  if (mainImg) imageWrap.append(mainImg);
-
-  const top = document.createElement('div');
-  top.append(content, imageWrap);
+  const top = buildMain(mainRow);
 
   const accordionWrap = document.createElement('div');
   itemRows.forEach((row, i) => accordionWrap.append(buildAccordionItem(row, i === 0)));

@@ -329,3 +329,19 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+.section.overview-accordion-container {
+  background: #eee;
+
+  .default-content-wrapper, .overview-accordion-wrapper {
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .default-content-wrapper {
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+}
