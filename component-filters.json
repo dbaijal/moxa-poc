@@ -20,8 +20,7 @@
       "related-articles",
       "product-banner",
       "product-viewer",
-      "hero-banner",
-      "page-navigation"
+      "hero-banner"
     ]
   },
   {
@@ -43,12 +42,6 @@
       "image",
       "button",
       "title"
-    ]
-  },
-  {
-    "id": "page-navigation",
-    "components": [
-      "nav-link"
     ]
   }
 ]
