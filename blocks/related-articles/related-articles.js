@@ -1,3 +1,21 @@
+// POC only: DAM references are served un-optimized from the publish instance,
+// since /content/dam does not resolve on the EDS delivery domain.
+const PUBLISH_HOST = 'https://publish-p170892-e1840404.adobeaemcloud.com';
+const ARTICLES_INDEX = '/articles-index.json';
+const MAX_CARDS = 3;
+
+function resolveImage(image) {
+  if (!image) return '';
+  return image.startsWith('/content/dam') ? `${PUBLISH_HOST}${image}` : image;
+}
+
+function parseTags(value) {
+  return (value || '')
+    .split(',')
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
+
 function buildCardBody(item) {
   const frag = document.createDocumentFragment();
 
@@ -7,7 +25,7 @@ function buildCardBody(item) {
   infoDetail.className = 'img-card-info-detail';
   const date = document.createElement('span');
   date.className = 'img-card-date';
-  date.textContent = item.date;
+  date.textContent = item.articleDate;
   infoDetail.append(date);
   info.append(infoDetail);
 
@@ -26,11 +44,13 @@ function buildCardBody(item) {
 function buildCard(item) {
   const path = item.path || '#';
 
+  const imageUrl = resolveImage(item.image);
+
   const imgWrap = document.createElement('div');
   imgWrap.className = 'img-card-img-wrap';
   const img = document.createElement('div');
   img.className = 'img-card-img';
-  img.style.backgroundImage = `url("${item.image}")`;
+  img.style.backgroundImage = `url("${imageUrl}")`;
   imgWrap.append(img);
 
   const container = document.createElement('div');
@@ -50,7 +70,7 @@ function buildCard(item) {
   overlayTint.className = 'img-card-overlay';
   const overlayBg = document.createElement('div');
   overlayBg.className = 'img-card-overlay-background';
-  overlayBg.style.backgroundImage = `url("${item.image}")`;
+  overlayBg.style.backgroundImage = `url("${imageUrl}")`;
   overlayBg.append(overlayTint);
 
   const overlayContent = document.createElement('div');
@@ -76,9 +96,19 @@ function buildCard(item) {
   return card;
 }
 
+function readSelectedTags(tagsRow) {
+  if (!tagsRow) return [];
+  const items = [...tagsRow.querySelectorAll('li')];
+  if (items.length) {
+    return items.map((li) => li.textContent.trim()).filter(Boolean);
+  }
+  return parseTags(tagsRow.textContent);
+}
+
 export default async function decorate(block) {
-  const titleRow = block.children[0];
+  const [titleRow, tagsRow] = block.children;
   const title = titleRow ? titleRow.textContent.trim() : 'More Articles';
+  const selectedTags = readSelectedTags(tagsRow);
 
   const heading = document.createElement('h2');
   heading.className = 'main-section-heading';
@@ -93,8 +123,21 @@ export default async function decorate(block) {
 
   block.replaceChildren(container);
 
-  const resp = await fetch(`${window.hlx.codeBasePath}/blocks/related-articles/mock-data.json`);
+  if (!selectedTags.length) return;
+
+  const resp = await fetch(ARTICLES_INDEX);
   if (!resp.ok) return;
   const { data } = await resp.json();
-  data.forEach((item) => cards.append(buildCard(item)));
+
+  const currentPath = window.location.pathname.replace(/\.html$/, '');
+  const items = data
+    .filter((item) => item.path !== currentPath)
+    .filter((item) => {
+      const itemTags = parseTags(item.articleTags);
+      return selectedTags.some((tag) => itemTags.includes(tag));
+    })
+    .sort((a, b) => new Date(b.articleDate) - new Date(a.articleDate))
+    .slice(0, MAX_CARDS);
+
+  items.forEach((item) => cards.append(buildCard(item)));
 }
