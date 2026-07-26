@@ -62,7 +62,9 @@
         "hero-banner",
         "page-navigation",
         "video-teaser",
-        "overview-accordion"
+        "overview-accordion",
+        "product-cards",
+        "case-study-teaser"
       ]
     }
   ]

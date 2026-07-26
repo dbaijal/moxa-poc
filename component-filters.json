@@ -23,7 +23,9 @@
       "hero-banner",
       "page-navigation",
       "video-teaser",
-      "overview-accordion"
+      "overview-accordion",
+      "product-cards",
+      "case-study-teaser"
     ]
   },
   {
@@ -57,6 +59,12 @@
     "id": "page-navigation",
     "components": [
       "navigation-link"
+    ]
+  },
+  {
+    "id": "product-cards",
+    "components": [
+      "product-card"
     ]
   }
 ]

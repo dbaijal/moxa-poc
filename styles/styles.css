@@ -342,6 +342,8 @@ main .section.highlight {
   .default-content-wrapper {
     h2 {
       margin-bottom: 40px;
+      text-align: center;
+      color: #5b5b5b;
     }
   }
 }

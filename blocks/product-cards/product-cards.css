@@ -1,0 +1,148 @@
+.product-cards-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
+}
+
+.product-cards-item {
+  flex: 1 1 0;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+  padding: 32px 24px;
+  overflow: hidden;
+  transition: flex-grow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-cards-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.product-cards-image {
+  flex-shrink: 0;
+}
+
+.product-cards-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.product-cards-title h3 {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px;
+}
+
+.product-cards-title p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+.product-cards-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 24px;
+  border: 1px solid #fa943e;
+  color: #fa943e;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+
+.product-cards-features {
+  display: none;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.product-cards-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed #d6d6d6;
+}
+
+.product-cards-feature:last-child {
+  border-bottom: none;
+}
+
+.product-cards-feature .icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+.product-cards-feature .icon img {
+  width: 18px;
+  height: 18px;
+}
+
+.product-cards-feature-title {
+  font-weight: 700;
+  margin: 0 0 2px;
+  color: #333;
+}
+
+.product-cards-feature-desc {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+@media (width >= 900px) {
+  .product-cards-list {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .product-cards-item:hover {
+    flex-grow: 3;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .product-cards-item:hover .product-cards-header {
+    flex-direction: row;
+    align-items: center;
+    flex: 0 0 auto;
+    width: auto;
+    gap: 12px;
+  }
+
+  .product-cards-item:hover .product-cards-image {
+    width: 64px;
+  }
+
+  .product-cards-item:hover .product-cards-btn {
+    display: none;
+  }
+
+  .product-cards-item:hover .product-cards-features {
+    display: block;
+    flex: 1 1 auto;
+    margin: 0 0 0 32px;
+  }
+}

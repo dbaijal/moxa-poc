@@ -247,6 +247,38 @@
     ]
   },
   {
+    "id": "case-study-teaser",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "learnMoreLabel",
+        "label": "Learn More Label",
+        "value": "Learn More"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -397,6 +429,33 @@
         "value": "",
         "label": "Description",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-card",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "features",
+        "label": "Feature List",
+        "description": "A bullet list. Start each item with an icon shortcode (e.g. :gear:) followed by a bold feature title, then the description text.",
+        "value": ""
       }
     ]
   },
