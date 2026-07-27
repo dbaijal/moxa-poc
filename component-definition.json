@@ -433,6 +433,7 @@
         {
           "title": "Resource Item",
           "id": "resource-item",
+          "filter": "resource-item-rte",
           "plugins": {
             "xwalk": {
               "page": {
