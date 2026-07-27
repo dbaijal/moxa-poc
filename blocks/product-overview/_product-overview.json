@@ -10,7 +10,7 @@
             "template": {
               "name": "Product Overview",
               "model": "product-overview",
-              "key-value": true
+              "key-value": false
             }
           }
         }
