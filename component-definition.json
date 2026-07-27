@@ -463,6 +463,7 @@
         {
           "title": "Specification Item",
           "id": "specification-item",
+          "filter": "specification-item-rte",
           "plugins": {
             "xwalk": {
               "page": {
