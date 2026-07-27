@@ -37,6 +37,10 @@
             {
               "name": "Article",
               "value": "article"
+            },
+            {
+              "name": "PDP Container",
+              "value": "pdp-container"
             }
           ]
         }
