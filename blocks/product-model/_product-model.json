@@ -1,0 +1,60 @@
+{
+  "definitions": [
+    {
+      "title": "Product Model",
+      "id": "product-model",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product Model",
+              "model": "product-model"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-model",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "heading",
+          "label": "Title",
+          "value": "Available models"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "content",
+          "label": "Content",
+          "value": "",
+          "rte": {
+            "toolbar": {
+              "format": ["bold", "italic", "underline"],
+              "list": ["bullet_list", "ordered_list"],
+              "insert": ["link", "unlink", "table"],
+              "editor": ["removeformat"],
+              "sections": ["format", "list", "insert", "editor"]
+            },
+            "actions": {
+              "table": {
+                "label": "Insert Table",
+                "shortcut": "Mod-Alt-T",
+                "wrapInParagraphs": true
+              },
+              "link": {
+                "hideTarget": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

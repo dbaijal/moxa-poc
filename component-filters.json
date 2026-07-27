@@ -25,7 +25,11 @@
       "video-teaser",
       "overview-accordion",
       "product-cards",
-      "case-study-teaser"
+      "case-study-teaser",
+      "product-overview",
+      "product-specification",
+      "product-resource",
+      "product-model"
     ]
   },
   {
@@ -62,9 +66,171 @@
     ]
   },
   {
+    "id": "press-release-details",
+    "components": [
+      "title",
+      "press-release-image",
+      "press-release-content",
+      "press-release-table",
+      "table"
+    ]
+  },
+  {
+    "id": "press-release-content-rte",
+    "rte": {
+      "toolbar": {
+        "format": [
+          "bold",
+          "italic",
+          "underline",
+          "strike"
+        ],
+        "alignment": [
+          "left",
+          "center",
+          "right",
+          "justify"
+        ],
+        "direction": [
+          "rtl",
+          "ltr"
+        ],
+        "indentation": [
+          "indent",
+          "outdent"
+        ],
+        "blocks": [
+          "paragraph",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "code_block"
+        ],
+        "list": [
+          "bullet_list",
+          "ordered_list"
+        ],
+        "insert": [
+          "link",
+          "unlink",
+          "image",
+          "table",
+          "special_characters"
+        ],
+        "sr_script": [
+          "superscript",
+          "subscript"
+        ],
+        "editor": [
+          "removeformat",
+          "paste_text"
+        ],
+        "sections": [
+          "format",
+          "alignment",
+          "direction",
+          "indentation",
+          "blocks",
+          "list",
+          "insert",
+          "sr_script",
+          "editor"
+        ]
+      }
+    },
+    "components": [
+      "richtext"
+    ]
+  },
+  {
+    "id": "table-rte",
+    "rte": {
+      "toolbar": {
+        "format": [
+          "bold",
+          "italic",
+          "underline",
+          "strike"
+        ],
+        "alignment": [
+          "left",
+          "center",
+          "right",
+          "justify"
+        ],
+        "direction": [
+          "rtl",
+          "ltr"
+        ],
+        "indentation": [
+          "indent",
+          "outdent"
+        ],
+        "blocks": [
+          "paragraph",
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "h6",
+          "code_block"
+        ],
+        "list": [
+          "bullet_list",
+          "ordered_list"
+        ],
+        "insert": [
+          "link",
+          "unlink",
+          "image",
+          "table",
+          "special_characters"
+        ],
+        "sr_script": [
+          "superscript",
+          "subscript"
+        ],
+        "editor": [
+          "removeformat",
+          "paste_text"
+        ],
+        "sections": [
+          "format",
+          "alignment",
+          "direction",
+          "indentation",
+          "blocks",
+          "list",
+          "insert",
+          "sr_script",
+          "editor"
+        ]
+      }
+    },
+    "components": [
+      "richtext"
+    ]
+  },
+  {
     "id": "product-cards",
     "components": [
       "product-card"
+    ]
+  },
+  {
+    "id": "product-resource",
+    "components": [
+      "resource-item"
+    ]
+  },
+  {
+    "id": "product-specification",
+    "components": [
+      "specification-item"
     ]
   }
 ]

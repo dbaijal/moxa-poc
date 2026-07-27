@@ -64,7 +64,11 @@
         "video-teaser",
         "overview-accordion",
         "product-cards",
-        "case-study-teaser"
+        "case-study-teaser",
+        "product-overview",
+        "product-specification",
+        "product-resource",
+        "product-model"
       ]
     }
   ]

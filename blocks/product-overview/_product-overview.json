@@ -1,0 +1,63 @@
+{
+  "definitions": [
+    {
+      "title": "Product Overview",
+      "id": "product-overview",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Product Overview",
+              "model": "product-overview",
+              "key-value": true
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-overview",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "tabName",
+          "label": "Tab Title",
+          "value": "Overview"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "content",
+          "label": "Content",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "downloadLabel",
+          "label": "Download Product Information Sheet Button Label",
+          "value": "Download product information sheet"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "printLabel",
+          "label": "Print This Page Label",
+          "value": "Print this page"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "saveLabel",
+          "label": "Save To My Moxa Label",
+          "value": "Save to My Moxa"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

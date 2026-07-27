@@ -409,6 +409,187 @@
     ]
   },
   {
+    "id": "press-release-details",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "pdf-download-path",
+        "label": "PDF Download Path",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "prev-release-title",
+        "label": "Previous Release Title",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "prev-release-link",
+        "label": "Previous Release Link",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "next-release-title",
+        "label": "Next Release Title",
+        "value": "",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "next-release-link",
+        "label": "Next Release Link",
+        "value": "",
+        "valueType": "string"
+      }
+    ],
+    "children": [
+      "press-release-content",
+      "press-release-image",
+      "table-content"
+    ]
+  },
+  {
+    "id": "press-release-content",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Press Release Content",
+        "description": "For disclaimer content - use `:disclaimer:` before content, for injecting inline image on right side - use `:<image-name>:` like example `:hero-banner:` without file extension",
+        "rte": {
+          "toolbar": {
+            "format": [
+              "bold",
+              "italic",
+              "underline"
+            ],
+            "list": [
+              "bullet_list",
+              "ordered_list"
+            ],
+            "insert": [
+              "link",
+              "unlink",
+              "table"
+            ],
+            "editor": [
+              "removeformat"
+            ],
+            "sections": [
+              "format",
+              "list",
+              "insert",
+              "editor"
+            ]
+          },
+          "actions": {
+            "table": {
+              "label": "Insert Table",
+              "shortcut": "Mod-Alt-T",
+              "wrapInParagraphs": true
+            },
+            "link": {
+              "hideTarget": false
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "press-release-image",
+    "fields": [
+      {
+        "component": "custom-asset-namespace:custom-asset",
+        "configUrl": "https://1964180-msilassetpickerconf.adobeio-static.net/api/v1/web/assetpicker_config_aio/get-config",
+        "valueType": "string",
+        "name": "image",
+        "label": "Press Release Image",
+        "multi": false,
+        "assetType": "image"
+      }
+    ]
+  },
+  {
+    "id": "press-release-table",
+    "fields": [
+      {
+        "component": "hidden",
+        "name": "table-type",
+        "value": "press-release-table"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Enter Table content",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "text",
+        "name": "id",
+        "label": "Id",
+        "valueType": "string",
+        "value": "",
+        "description": "The id of the table"
+      },
+      {
+        "component": "richtext",
+        "name": "tableContent",
+        "label": "Table Content",
+        "valueType": "string",
+        "value": "",
+        "rte": {
+          "toolbar": {
+            "format": [
+              "bold",
+              "italic",
+              "underline"
+            ],
+            "list": [
+              "bullet_list",
+              "ordered_list"
+            ],
+            "insert": [
+              "link",
+              "unlink",
+              "table"
+            ],
+            "editor": [
+              "removeformat"
+            ],
+            "sections": [
+              "format",
+              "list",
+              "insert",
+              "editor"
+            ]
+          },
+          "actions": {
+            "table": {
+              "label": "Insert Table",
+              "shortcut": "Mod-Alt-T",
+              "wrapInParagraphs": true
+            },
+            "link": {
+              "hideTarget": false
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "product-banner",
     "fields": [
       {
@@ -456,6 +637,230 @@
         "label": "Feature List",
         "description": "A bullet list. Start each item with an icon shortcode (e.g. :gear:) followed by a bold feature title, then the description text.",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "product-model",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Title",
+        "value": "Available models"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": "",
+        "rte": {
+          "toolbar": {
+            "format": [
+              "bold",
+              "italic",
+              "underline"
+            ],
+            "list": [
+              "bullet_list",
+              "ordered_list"
+            ],
+            "insert": [
+              "link",
+              "unlink",
+              "table"
+            ],
+            "editor": [
+              "removeformat"
+            ],
+            "sections": [
+              "format",
+              "list",
+              "insert",
+              "editor"
+            ]
+          },
+          "actions": {
+            "table": {
+              "label": "Insert Table",
+              "shortcut": "Mod-Alt-T",
+              "wrapInParagraphs": true
+            },
+            "link": {
+              "hideTarget": false
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "product-overview",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabName",
+        "label": "Tab Title",
+        "value": "Overview"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "downloadLabel",
+        "label": "Download Product Information Sheet Button Label",
+        "value": "Download product information sheet"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "printLabel",
+        "label": "Print This Page Label",
+        "value": "Print this page"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "saveLabel",
+        "label": "Save To My Moxa Label",
+        "value": "Save to My Moxa"
+      }
+    ]
+  },
+  {
+    "id": "resource-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "resourceHeading",
+        "label": "Title",
+        "value": "Software, firmware, and drivers"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "filters",
+        "label": "Filters",
+        "description": "A bullet list of filter options. If left empty, the filter dropdown is not shown.",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "tags",
+        "label": "Tags",
+        "description": "A bullet list of tags, rendered as buttons. The first tag is selected by default.",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "value": "",
+        "rte": {
+          "toolbar": {
+            "format": [
+              "bold",
+              "italic",
+              "underline"
+            ],
+            "list": [
+              "bullet_list",
+              "ordered_list"
+            ],
+            "insert": [
+              "link",
+              "unlink",
+              "table"
+            ],
+            "editor": [
+              "removeformat"
+            ],
+            "sections": [
+              "format",
+              "list",
+              "insert",
+              "editor"
+            ]
+          },
+          "actions": {
+            "table": {
+              "label": "Insert Table",
+              "shortcut": "Mod-Alt-T",
+              "wrapInParagraphs": true
+            },
+            "link": {
+              "hideTarget": false
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "specification-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "accordionHeading",
+        "label": "Accordion Title",
+        "description": "e.g. Ethernet Interface"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "accordionContent",
+        "label": "Accordion Content",
+        "value": "",
+        "rte": {
+          "toolbar": {
+            "format": [
+              "bold",
+              "italic",
+              "underline"
+            ],
+            "list": [
+              "bullet_list",
+              "ordered_list"
+            ],
+            "insert": [
+              "link",
+              "unlink",
+              "table"
+            ],
+            "editor": [
+              "removeformat"
+            ],
+            "sections": [
+              "format",
+              "list",
+              "insert",
+              "editor"
+            ]
+          },
+          "actions": {
+            "table": {
+              "label": "Insert Table",
+              "shortcut": "Mod-Alt-T",
+              "wrapInParagraphs": true
+            },
+            "link": {
+              "hideTarget": false
+            }
+          }
+        }
       }
     ]
   },
