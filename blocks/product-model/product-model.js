@@ -11,6 +11,32 @@ function countModelColumns(table) {
   return firstIsEmpty ? cells.length - 1 : cells.length;
 }
 
+function buildEnquiryButton() {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'product-model-enquiry-btn';
+  button.textContent = 'ADD TO ENQUIRY';
+  return button;
+}
+
+function appendEnquiryRow(table) {
+  const tbody = table.querySelector('tbody') || table;
+  const columnCount = tbody.querySelector('tr')?.children.length ?? 0;
+  if (!columnCount) return;
+
+  const row = document.createElement('tr');
+  row.className = 'product-model-enquiry-row';
+  for (let i = 0; i < columnCount; i += 1) {
+    const cell = document.createElement('td');
+    if (i > 0) {
+      cell.className = 'product-model-enquiry-cell';
+      cell.append(buildEnquiryButton());
+    }
+    row.append(cell);
+  }
+  tbody.append(row);
+}
+
 function buildImageToggle(imageRows) {
   imageRows.forEach((row) => row.classList.add('hide'));
 
@@ -37,6 +63,7 @@ function buildImageToggle(imageRows) {
 export default async function decorate(block) {
   const [headingRow, contentRow] = block.children;
   const tables = contentRow ? [...contentRow.querySelectorAll('table')] : [];
+  tables.forEach(appendEnquiryRow);
 
   const heading = document.createElement('h3');
   heading.className = 'product-model-heading';

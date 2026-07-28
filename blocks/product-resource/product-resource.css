@@ -91,6 +91,13 @@
       color: #008787;
       text-decoration: none;
     }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin: 0 6px;
+      vertical-align: middle;
+    }
   }
 
   ul {
