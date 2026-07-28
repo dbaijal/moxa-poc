@@ -330,20 +330,32 @@ main .section.highlight {
   padding: 40px 0;
 }
 
-.section.overview-accordion-container {
-  background: #eee;
-
-  .default-content-wrapper, .overview-accordion-wrapper {
-    max-width: 1180px;
-    padding: 0 20px;
-    margin: 0 auto;
+.section {
+  &.overview-accordion-container {
+    background: #eee;
+  
+    .default-content-wrapper, .overview-accordion-wrapper {
+      max-width: 1180px;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+  
+    .default-content-wrapper {
+      h2 {
+        margin-bottom: 40px;
+        text-align: center;
+        color: #5b5b5b;
+      }
+    }
   }
 
-  .default-content-wrapper {
-    h2 {
-      margin-bottom: 40px;
-      text-align: center;
-      color: #5b5b5b;
+  &.pdp-container {
+        background-color: rgb(226, 231, 234);
+    padding: 48px 0px;
+    .block {
+      max-width: 1180px;
+      padding: 0 20px;
+      margin: 0 auto;
     }
   }
 }
