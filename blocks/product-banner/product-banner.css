@@ -153,3 +153,64 @@
 .hero-banner__heading b {
   font-weight: 700
 }
+
+.hero-banner__description {
+  margin-top: 8px;
+}
+
+.hero-banner__description p {
+  margin: 0 0 8px;
+}
+
+.hero-banner.hero-banner--has-image {
+  max-width: 1160px;
+  gap: 32px;
+  margin: 0 auto;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.hero-banner.hero-banner--s.hero-banner--has-image .container {
+  width: auto;
+  max-width: none;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-banner__image {
+  flex: 0 1 420px;
+}
+
+.hero-banner__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .hero-banner--has-image {
+    flex-direction: column;
+  }
+
+  .hero-banner__image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+.product-banner.product .hero-banner.hero-banner--main {
+  background: #fff;
+  color: #333;
+  align-items: center;
+}
+
+.product-banner.product .hero-banner__heading {
+  color: #008787;
+}
+
+.product-banner.product .hero-banner__subheading,
+.product-banner.product .hero-banner__description {
+  color: #333;
+}
