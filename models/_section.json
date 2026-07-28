@@ -72,7 +72,8 @@
         "product-overview",
         "product-specification",
         "product-resource",
-        "product-model"
+        "product-model",
+        "series-card"
       ]
     }
   ]

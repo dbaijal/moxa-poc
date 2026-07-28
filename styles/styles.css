@@ -24,7 +24,7 @@
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
+  --body-font-size-m: 14px;
   --body-font-size-s: 19px;
   --body-font-size-xs: 17px;
 
@@ -56,7 +56,7 @@
 @media (width >= 900px) {
   :root {
     /* body sizes */
-    --body-font-size-m: 16px;
+    --body-font-size-m: 14px;
     --body-font-size-s: 16px;
     --body-font-size-xs: 14px;
 
@@ -87,6 +87,8 @@ body.appear {
 header {
   height: var(--nav-height);
   box-shadow: 0 0 8px 0 #cecece;
+      z-index: 9;
+    position: relative;
 }
 
 header .header,

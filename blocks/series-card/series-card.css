@@ -1,0 +1,150 @@
+.series-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.series-card-inner {
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+  padding: 24px;
+}
+
+.series-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.series-card-media {
+  max-width: 160px;
+}
+
+.series-card-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.series-card-body {
+  flex: 1 1 auto;
+}
+
+.series-card-product-name {
+  margin: 0 0 4px;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.series-card-series-name {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #008787;
+}
+
+.series-card-description {
+  margin: 0;
+  color: #555;
+}
+
+.series-card-content {
+  margin-top: 24px;
+}
+
+.series-card-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.series-card-content tr {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.series-card-content tr:last-child {
+  border-bottom: none;
+}
+
+.series-card-content td {
+  padding: 16px 16px 16px 0;
+  vertical-align: top;
+}
+
+.series-card-content td:first-child {
+  width: 140px;
+  color: #8a8a8a;
+}
+
+.series-card-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.series-card-content p {
+  margin: 0 0 4px;
+}
+
+.series-card-content p:last-child {
+  margin-bottom: 0;
+}
+
+.series-card-content a {
+  color: #008787;
+  text-decoration: none;
+}
+
+.series-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.series-card-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: #484848;
+  text-align: left;
+  text-decoration: none;
+}
+
+.series-card-action img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+@media (width >= 600px) {
+  .series-card-header {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .series-card-media {
+    flex: 0 0 140px;
+  }
+}
+
+@media (width >= 900px) {
+  .series-card-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .series-card-inner {
+    flex: 1 1 auto;
+  }
+
+  .series-card-actions {
+    flex: 0 0 240px;
+  }
+}
