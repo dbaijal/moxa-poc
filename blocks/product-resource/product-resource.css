@@ -1,8 +1,11 @@
 .product-resource-item {
-  background-color: #fff;
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
-  padding: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 60px;
+  
+  .product-resource-content {
+    background-color: #fff;
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+    padding: 24px;
+  }
 }
 
 .product-resource-item:last-child {
@@ -10,7 +13,7 @@
 }
 
 .product-resource-heading {
-  margin: 0 0 16px;
+  margin: 0 0 24px;
 }
 
 .product-resource-controls {
@@ -68,6 +71,32 @@
 .product-resource-table-wrap table {
   width: 100%;
   border-collapse: collapse;
+
+  tr {
+    font-size: 13px;
+    &:first-child {
+      td {
+        color: rgb(32, 74, 136);
+        font-weight: 700;
+      }
+    }
+
+    em {
+      font-style: normal;
+      color: rgb(133, 133, 133);
+    }
+
+    a {
+      color: #008787;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
 
 .product-resource-table-wrap th {

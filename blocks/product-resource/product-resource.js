@@ -94,6 +94,9 @@ function buildItem(row) {
   heading.className = 'product-resource-heading';
   heading.textContent = cellText(titleCell);
 
+  const contentWrapper = document.createElement('div');
+  contentWrapper.className = 'product-resource-content';
+
   const controls = document.createElement('div');
   controls.className = 'product-resource-controls';
   const filter = buildFilter(filtersCell);
@@ -107,9 +110,10 @@ function buildItem(row) {
   item.className = 'product-resource-item';
   moveInstrumentation(row, item);
   item.append(heading);
-  if (controls.children.length) item.append(controls);
-  if (tableWrap) item.append(tableWrap);
-  if (showAllBtn) item.append(showAllBtn);
+  item.append(contentWrapper);
+  if (controls.children.length) contentWrapper.append(controls);
+  if (tableWrap) contentWrapper.append(tableWrap);
+  if (showAllBtn) contentWrapper.append(showAllBtn);
 
   return item;
 }
