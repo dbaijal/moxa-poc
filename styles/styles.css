@@ -56,7 +56,7 @@
 @media (width >= 900px) {
   :root {
     /* body sizes */
-    --body-font-size-m: 14px;
+    --body-font-size-m: 15px;
     --body-font-size-s: 16px;
     --body-font-size-xs: 14px;
 
@@ -335,6 +335,7 @@ main .section.highlight {
 .section {
   &.overview-accordion-container {
     background: #eee;
+            padding: 50px 0;
   
     .default-content-wrapper, .overview-accordion-wrapper {
       max-width: 1180px;

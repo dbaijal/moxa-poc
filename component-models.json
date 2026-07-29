@@ -945,6 +945,18 @@
     ]
   },
   {
+    "id": "request-info-form",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": "Request Information"
+      }
+    ]
+  },
+  {
     "id": "series-card",
     "fields": [
       {
