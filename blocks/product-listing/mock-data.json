@@ -1,0 +1,436 @@
+{
+  "data": {
+    "categoryId": "C000000341",
+    "seriesId": "S000000521",
+    "seriesName": "EDS-4008 Series",
+    "description": "2026-07-31 02:53:32.561 4 FE, 4 FE-to-1GbE-port managed Ethernet switches with 802.3bt PoE options",
+    "status": "P6",
+    "createDate": "2021-02-09 03:36:16.000",
+    "updateDate": "2026-07-31 02:53:32.561",
+    "creator": "Administrator",
+    "updater": "JeimmyCM_Huang",
+    "disabled": "N",
+    "lastBuyDate": null,
+    "announcement1": null,
+    "announcement2": null,
+    "salesCountry": "ALL",
+    "passC5Date": "2022-02-14 16:00:00.0000000 +00:00",
+    "isNrnd": "N",
+    "isEos": "N",
+    "rSeriesId": null,
+    "overviews": [
+      {
+        "id": 25786,
+        "ordinal": 1,
+        "type": "C",
+        "topic": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?Pub Inc?><topic outputclass=\"Module_C\" xml:lang=\"zh\"> <title outputclass=\"Heading1\" section=\"Introduction\">Introduction</title> <body> <div outputclass=\"TextOrImage\"><p outputclass=\"Normal\">The EDS-4008 Series is a range of 8-port managed Fast Ethernet switches with the option for four 1 Gbps uplink ports or two 100M ST/SC fiber-optic ports. This Series also offers models with four 10/100BaseT(X) 802.3af (PoE), 802.3at (PoE+), and 802.3bt-compliant Ethernet PoE port options to connect high-bandwidth PoE devices.</p><p outputclass=\"Normal\">Redundant Ethernet technologies such as Turbo Ring, Turbo Chain, and RSTP/STP increase the reliability of your system and improve the availability of your network backbone. The EDS-4008 Series is designed specifically for demanding applications such as video and process monitoring, ITS, and DCS systems, all of which can benefit from a scalable backbone.</p></div><?Pub Caret -1?> <note outputclass=\"Note\"/> </body> </topic>"
+      },
+      {
+        "id": 25787,
+        "ordinal": 2,
+        "type": "B",
+        "topic": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?Pub Inc?><topic outputclass=\"Module_B\"> <title code=\"P3348_1\" outputclass=\"Heading2\" section=\"Introduction\">IEC 62443-4-2 Security Level 2 Certified</title> <body> <div outputclass=\"TextOrImage\">              <p code=\"P5443\" outputclass=\"Normal\">EDS-(G)4000 Series models are IEC 62443-4-2 Security Level 2 certified (<xref format=\"html\" href=\"https://certificates.iecee.org/#/deliverables/CERT/1605016/view\" id=\"View-BF5FC51E\" keyref=\"https://certificates.iecee.org/#/deliverables/CERT/1605016/view\" scope=\"external\">https://certificates.iecee.org/#/deliverables/CERT/1605016/view</xref>) helping our customers meet the compliance requirements of secure industrial network design.</p>                </div> <note outputclass=\"Note\"/> </body><?Pub Caret -1?> </topic>"
+      }
+    ],
+    "specs": [
+      {
+        "id": 3249055,
+        "category": "Ethernet Interface",
+        "itemList": "{\"ckey\":\"10/100BaseT(X) Ports (RJ45 connector)\",\"cvalue\":[\"EDS-4008-LV/-HV/-T models: 8<br>EDS-4008-2MST-LV/-HV/-T models: 6<br>EDS-4008-2MSC-LV/-HV/-T models: 6<br>EDS-4008-2SSC-LV/-HV/-T models: 6<br>EDS-4008-2GT-2GS-LV/-HV/-T models: 4\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"EDS-4008-LV/-HV/-T models: 8<br>EDS-4008-2MST-LV/-HV/-T models: 6<br>EDS-4008-2MSC-LV/-HV/-T models: 6<br>EDS-4008-2SSC-LV/-HV/-T models: 6<br>EDS-4008-2GT-2GS-LV/-HV/-T models: 4\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cseparator\":\"NewLine\"}",
+        "htmlTable": null,
+        "ordinal": 1
+      },
+      {
+        "id": 3249063,
+        "category": "Ethernet Interface",
+        "itemList": "{\"ckey\":\"Optical Fiber\",\"cvalue\":[\"T-00243\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"T-00243\"],\"cseparator\":\"\"}",
+        "htmlTable": "<!DOCTYPE html>  <html>    <head>    <style>      </style>    </head>    <body>    <table class=\"mxTableStyle\" style=\"width:100%\">    <thead>    <tr>  <td align=\"left\" rowspan=\"2\" colspan=\"2\" style=\"width:5.5839389532mm\"></td>  <td align=\"center\" rowspan=\"1\" colspan=\"3\" style=\"width:7.4694490063972mm\">100BaseFX</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">Multi-Mode</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">Single-Mode</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"2\" colspan=\"2\" style=\"width:5.5839389532mm\">Fiber Cable Type</td>  <td align=\"center\" rowspan=\"2\" colspan=\"1\" style=\"width:1.6993787547572mm\">OM1</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">50/125 &micro;m</td>  <td align=\"center\" rowspan=\"2\" colspan=\"1\" style=\"width:2.88503512582mm\">G.652</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">800 MHz x km</td>  </tr>    </thead>    <tbody>    <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:5.5839389532mm\">Typical Distance</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:1.6993787547572mm\">4 km</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">5 km</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">40 km</td>  </tr>  <tr>  <td align=\"left\" rowspan=\"3\" colspan=\"1\" style=\"width:2.28010840589mm\">Wavelength</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">Typical (nm)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">1300</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">1310</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">TX Range (nm)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">1260 to 1360</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">1280 to 1340</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">RX Range (nm)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">1100 to 1600</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">1100 to 1600</td>  </tr>  <tr>  <td align=\"left\" rowspan=\"4\" colspan=\"1\" style=\"width:2.28010840589mm\">Optical Power</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">TX Range (dBm)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">-10 to -20</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">0 to -5</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">RX Range (dBm)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">-3 to -32</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">-3 to -34</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">Link Budget (dB)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">12</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">29</td>  </tr>  <tr>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:3.30383054731mm\">Dispersion Penalty (dB)</td>  <td align=\"center\" rowspan=\"1\" colspan=\"2\" style=\"width:4.5844138805772mm\">3</td>  <td align=\"center\" rowspan=\"1\" colspan=\"1\" style=\"width:2.88503512582mm\">1</td>  </tr>    </tbody>    <tfoot>    <tr>  <td align=\"left\" rowspan=\"1\" colspan=\"5\" style=\"width:13.0533879595972mm\">Note: When connecting a single-mode fiber transceiver, we recommend using an attenuator to prevent damage caused by excessive optical power.<br>Note: Compute the &ldquo;typical distance&rdquo; of a specific fiber transceiver as follows: Link budget (dB) &gt; dispersion penalty (dB) + total link loss (dB).</td>  </tr>    </tfoot>    </table>    </body>    </html>  ",
+        "ordinal": 9
+      },
+      {
+        "id": 3249064,
+        "category": "Ethernet Software Features",
+        "itemList": "{\"ckey\":\"Industrial Protocols\",\"cvalue\":[\"EtherNet/IP\",\"Modbus TCP\",\"PROFINET IO Device\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"EtherNet/IP\",\"Modbus TCP\",\"PROFINET IO Device\"],\"cseparator\":\"NewLine\"}",
+        "htmlTable": null,
+        "ordinal": 1
+      }
+    ],
+    "feature": "{\"feature\":[\"Turbo Ring and Turbo Chain (recovery time &lt; 20 ms @ 250 switches)<fn>If the port link speed is 1 Gigabit or higher, the recovery time is &lt; 50 ms.</fn>, and RSTP/STP for network redundancy\",\"Support for IEEE 802.3bt PoE for up to 90 W output per port\",\"Wide range of power input options for flexible deployment\",\"Compact and flexible housing design to fit into confined spaces\",\"Supports MXstudio for easy, visualized industrial network management\",\"IEC 62443-4-2 Security Level 2 certified\",\"Marine cybersecurity certified (IACS UR E27 Rev.1, IEC 61162-460 Ed. 3.0 for switch role)\"]}\"",
+    "attachments": [
+      {
+        "id": 54592,
+        "supportOs": null,
+        "type": "IMAGE",
+        "subType": "SERIES",
+        "name": "Image for EDS-4008 Series",
+        "version": null,
+        "releaseHistory": null,
+        "releaseDate": "2021-12-28 16:00:00.0000000 +00:00",
+        "ordinal": 1,
+        "createDate": "2022-02-15 14:10:42.420",
+        "disabled": "N",
+        "attachmentId": "0000356508",
+        "checksum": "2c430c6b1e1deb0211e6a8b9eb5f6b6b8d8820ab7e2e1ac1651045eb74403dc343eb307ff6ddaa89fc268ce21c3b55c64a2638c723bbd77a3abb67569face6c4",
+        "damAsset": {
+          "assetId": "a091c795ed61f6d2e85da1be0218a3a29b0ecca6",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=a091c795ed61f6d2e85da1be0218a3a29b0ecca6"
+        }
+      },
+      {
+        "id": 54593,
+        "supportOs": null,
+        "type": "IMAGE",
+        "subType": "SERIES",
+        "name": "Image for EDS-4008 Series",
+        "version": null,
+        "releaseHistory": null,
+        "releaseDate": "2021-12-28 16:00:00.0000000 +00:00",
+        "ordinal": 2,
+        "createDate": "2022-02-15 14:10:42.420",
+        "disabled": "N",
+        "attachmentId": "0000356508",
+        "checksum": "0c7b9fa4e7d089fa2f7f913a3ebdc653b7a99848e07eda4ab7fa9ba2c271e5367509b64371684ce1cebc2babe4c618e32f83d1bc6e2c7ac6a51477504fc1d9cf",
+        "damAsset": {
+          "assetId": "bcf0911191a55ee95ea6aa78600d5a490046d575",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=bcf0911191a55ee95ea6aa78600d5a490046d575"
+        }
+      },
+      {
+        "id": 99198,
+        "supportOs": null,
+        "type": "IMAGE",
+        "subType": "CERTIFICATION",
+        "name": "moxa-ce-certification-logo-image.png",
+        "version": null,
+        "releaseHistory": null,
+        "releaseDate": null,
+        "ordinal": 2,
+        "createDate": "2026-06-02 16:21:41.197",
+        "disabled": "N",
+        "attachmentId": "IMG-0000000185",
+        "checksum": "b4d65c0ba8e07c4fc5cc22031578acf9f530b4f9985f44460dd4b9df77423c62f4d583f5362246aa1b64fa1c6fa086dfa2df8125b4759169173bd6dd5b60360b",
+        "damAsset": {
+          "assetId": "5bd935c1533a674f9d1e6890407bb0278059aa92",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=5bd935c1533a674f9d1e6890407bb0278059aa92"
+        }
+      },
+      {
+        "id": 99199,
+        "supportOs": null,
+        "type": "IMAGE",
+        "subType": "CERTIFICATION",
+        "name": "moxa-fcc-certification-logo-image.png",
+        "version": null,
+        "releaseHistory": null,
+        "releaseDate": null,
+        "ordinal": 3,
+        "createDate": "2026-06-02 16:21:41.197",
+        "disabled": "N",
+        "attachmentId": "IMG-0000000444",
+        "checksum": "a18c4a36cfbdf0506239264c4e20c949bc62f20f0da3f445a8003bcdf728ead0a97d329f9cc896f7567804131e10533dfc7fd69575d98d2894f289a49960a51a",
+        "damAsset": {
+          "assetId": "f034ba5ce8c5a55a72b0fbe8c3543cac57a88e45",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=f034ba5ce8c5a55a72b0fbe8c3543cac57a88e45"
+        }
+      },
+      {
+        "id": 98274,
+        "supportOs": "Windows 10,Windows 11,Windows Server 2016,Windows Server 2019,Windows Server 2022",
+        "type": "SOFTWARE",
+        "subType": "SOFTWARE PACKAGE",
+        "name": "Software Package for MXview One Series (Windows version)",
+        "version": "v1.7.2",
+        "releaseHistory": {
+          "assetId": "27382b6198da47a7f7e1a9d5f11a1fe2fb7c7c7a",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=27382b6198da47a7f7e1a9d5f11a1fe2fb7c7c7a"
+        },
+        "releaseDate": "2026-05-07 16:00:00.0000000 +00:00",
+        "ordinal": null,
+        "createDate": "2026-06-02 16:21:40.377",
+        "disabled": "N",
+        "attachmentId": "0000448166",
+        "checksum": "3e3efdc583f1c7dcd77da74f7ec926d43360713174b2c176cb9ea50309f95f591de5ba4b34a1e4f8e520dfcb11d7088b60058db6fe98f8baeed8cce0c50c999e",
+        "damAsset": {
+          "assetId": "1fbd192457465866c7aa571c9831d1a424823c19",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=1fbd192457465866c7aa571c9831d1a424823c19"
+        }
+      },
+      {
+        "id": 91584,
+        "supportOs": null,
+        "type": "DOCUMENT",
+        "subType": "QIG",
+        "name": "QIG for EDS-4008 Series",
+        "version": "v1.3",
+        "releaseHistory": null,
+        "releaseDate": "2025-10-28 16:00:00.0000000 +00:00",
+        "ordinal": null,
+        "createDate": "2025-10-28 15:51:24.863",
+        "disabled": "N",
+        "attachmentId": "0000439516",
+        "checksum": "cf6e45bb390bdb17a7383bad190aed0b9a452d14f8eafac4aeff2d79be8ce926ce01f8c143a22e594279bfd79cd5ea2984f7a59b64ff6a629c0b65fc2c5f2289",
+        "damAsset": {
+          "assetId": "04babcdcabda933d9b5044f14ccc9cdde0f80f1d",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=04babcdcabda933d9b5044f14ccc9cdde0f80f1d"
+        }
+      },
+      {
+        "id": 99202,
+        "supportOs": null,
+        "type": "DOCUMENT",
+        "subType": "DATASHEET",
+        "name": "Datasheet for EDS-4008 Series",
+        "version": "v1.7",
+        "releaseHistory": null,
+        "releaseDate": "2025-06-23 16:00:00.0000000 +00:00",
+        "ordinal": null,
+        "createDate": "2026-06-02 16:21:40.377",
+        "disabled": "Y",
+        "attachmentId": "0000432912",
+        "checksum": "44be3733f673509400338a2984915f0cc9e06f580b279f10de7b1a67f45285692922c1f6ffc0073ccbda5dc285eb729dd833adbe07bdbd5f93e57d0931966e6b",
+        "damAsset": {
+          "assetId": "c03836733d7de2d29545b602901ee857682ba799",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=c03836733d7de2d29545b602901ee857682ba799"
+        }
+      },
+      {
+        "id": 99203,
+        "supportOs": null,
+        "type": "DOCUMENT",
+        "subType": "DATASHEET",
+        "name": "Datasheet for EDS-4008 Series",
+        "version": "v1.8",
+        "releaseHistory": null,
+        "releaseDate": "2026-06-01 16:00:00.0000000 +00:00",
+        "ordinal": null,
+        "createDate": "2026-06-02 16:21:40.377",
+        "disabled": "N",
+        "attachmentId": "0000449321",
+        "checksum": "64c7a0ccbdc490168f7eefb6faeae7887e4608d8a332ade3b9d412be57e4957779850f020504179d99d5ecc1637937e1d5670ad6f4fda8918a5caf9073a27775",
+        "damAsset": {
+          "assetId": "d73438d7611be812cd614d56e7b0c2aecc46e6c3",
+          "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=d73438d7611be812cd614d56e7b0c2aecc46e6c3"
+        }
+      }
+    ],
+    "prodModel": "<!DOCTYPE html>  <html>    <head>  <style>  table, th, td {border: 1px solid black; padding: 2px; border-collapse: collapse;}  </style>  </head>  <body>    <table>    <thead>    <tr>  <td>Model Name</td>  <td>EDS-4008-LV</td>  <td>EDS-4008-LV-T</td>  <td>EDS-4008-HV</td>  <td>EDS-4008-HV-T</td>  <td>EDS-4008-2MSC-LV</td>  <td>EDS-4008-2MSC-LV-T</td>  <td>EDS-4008-2MSC-HV</td>  <td>EDS-4008-2MSC-HV-T</td>  <td>EDS-4008-2MST-LV</td>  <td>EDS-4008-2MST-LV-T</td>  <td>EDS-4008-2MST-HV</td>  <td>EDS-4008-2MST-HV-T</td>  <td>EDS-4008-2SSC-LV</td>  <td>EDS-4008-2SSC-LV-T</td>  <td>EDS-4008-2SSC-HV</td>  <td>EDS-4008-2SSC-HV-T</td>  <td>EDS-4008-2GT-2GS-LV</td>  <td>EDS-4008-2GT-2GS-LV-T</td>  <td>EDS-4008-2GT-2GS-HV</td>  <td>EDS-4008-2GT-2GS-HV-T</td>  <td>EDS-4008-4P-2GT-2GS-LVA</td>  <td>EDS-4008-4P-2GT-2GS-LVA-T</td>  <td>EDS-4008-4P-2GT-2GS-LVB</td>  <td>EDS-4008-4P-2GT-2GS-LVB-T</td>  </tr>    </thead>    <tbody>    <tr>  <td>10/100BaseT(X) Ports (RJ45 Connector)</td>  <td>8</td>  <td>8</td>  <td>8</td>  <td>8</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>6</td>  <td>4</td>  <td>4</td>  <td>4</td>  <td>4</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  </tr>  <tr>  <td>100BaseFX Ports (Multi-mode SC Connector)</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  </tr>  <tr>  <td>100BaseFX Ports (Multi-mode ST Connector)</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  </tr>  <tr>  <td>100BaseFX Ports (Single-mode SC Connector)</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  </tr>  <tr>  <td>PoE 10/100BaseT(X) Ports (RJ45 Connector)</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>4</td>  <td>4</td>  <td>4</td>  <td>4</td>  </tr>  <tr>  <td>10/100/1000BaseT(X) Ports (RJ45 Connector)</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  </tr>  <tr>  <td>100/1000BaseSFP Slots</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>&ndash;</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  <td>2</td>  </tr>  <tr>  <td>Operating Voltage</td>  <td>9.6 to 60 VDC</td>  <td>9.6 to 60 VDC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>9.6 to 60 VDC</td>  <td>9.6 to 60 VDC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>9.6 to 60 VDC</td>  <td>9.6 to 60 VDC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>9.6 to 60 VDC</td>  <td>9.6 to 60 VDC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>9.6 to 60 VDC</td>  <td>9.6 to 60 VDC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>88 to 300 VDC, 85 to 264 VAC</td>  <td>44 to 57 VDC (&gt; 52 VDC for PoE+ output recommended)</td>  <td>44 to 57 VDC (&gt; 52 VDC for PoE+ output recommended)</td>  <td>12 to 57 VDC (&gt; 52 VDC for PoE+ output recommended)</td>  <td>12 to 57 VDC (&gt; 52 VDC for PoE+ output recommended)</td>  </tr>  <tr>  <td>Pre-installed Power Module</td>  <td>PWR-100-LV</td>  <td>PWR-100-LV</td>  <td>PWR-105-HV-I</td>  <td>PWR-105-HV-I</td>  <td>PWR-100-LV</td>  <td>PWR-100-LV</td>  <td>PWR-105-HV-I</td>  <td>PWR-105-HV-I</td>  <td>PWR-100-LV</td>  <td>PWR-100-LV</td>  <td>PWR-105-HV-I</td>  <td>PWR-105-HV-I</td>  <td>PWR-100-LV</td>  <td>PWR-100-LV</td>  <td>PWR-105-HV-I</td>  <td>PWR-105-HV-I</td>  <td>PWR-100-LV</td>  <td>PWR-100-LV</td>  <td>PWR-105-HV-I</td>  <td>PWR-105-HV-I</td>  <td>PWR-101-LV-BP-I</td>  <td>PWR-101-LV-BP-I</td>  <td>PWR-103-LV-VB-I</td>  <td>PWR-103-LV-VB-I</td>  </tr>  <tr>  <td>Operating Temp.</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  <td>-10 to 60&deg;C</td>  <td>-40 to 75&deg;C</td>  </tr>    </tbody>    </table>    </body>    </html>  ",
+    "models": [
+      {
+        "modelId": "M000000913",
+        "modelName": "EDS-4008-LV",
+        "description": "2026-07-31 02:53:32.561 Managed Ethernet switch with 8 10/100BaseT(X) ports, dual power supply 12/24/48 VDC, -10 to 60°C operating temperature",
+        "status": "P6",
+        "createDate": "2019-11-18 06:06:39.000",
+        "updateDate": "2026-07-31 02:53:32.561",
+        "creator": "Administrator",
+        "updater": "Administrator",
+        "disabled": "N",
+        "salesCountry": "ALL",
+        "passC5Date": "2022-02-14 16:00:00.0000000 +00:00",
+        "attachments": [
+          {
+            "id": 54600,
+            "supportOs": null,
+            "type": "IMAGE",
+            "subType": "MODEL",
+            "name": "Image for EDS-4008-LV",
+            "version": null,
+            "releaseHistory": null,
+            "releaseDate": "2021-12-12 16:00:00.0000000 +00:00",
+            "ordinal": 1,
+            "createDate": "2022-02-15 14:10:42.420",
+            "disabled": "N",
+            "attachmentId": "0000355497",
+            "checksum": "bdeb3f1964925e42c648e6f86ed43471a67abc0343b7d8387dc33e72b17365e2d2b07298c975fb2a43e6522603aef780c1c6d99ad1739588379f3839ad625d24",
+            "damAsset": {
+              "assetId": "01e6e15e08473f29822152c83ac45ddb312e1f75",
+              "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=01e6e15e08473f29822152c83ac45ddb312e1f75"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "id": 3246793,
+            "category": "Ethernet Interface",
+            "itemList": "{\"ckey\":\"10/100BaseT(X) Ports (RJ45 connector)\",\"cvalue\":[\"8\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"8\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cseparator\":\"NewLine\"}",
+            "htmlTable": null,
+            "ordinal": 1
+          },
+          {
+            "id": 3246831,
+            "category": "Physical Characteristics",
+            "itemList": "{\"ckey\":\"Installation\",\"cvalue\":[\"DIN-rail mounting\",\"Wall mounting (with optional kit)\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"DIN-rail mounting\",\"Wall mounting (with optional kit)\"],\"cseparator\":\"NewLine\"}",
+            "htmlTable": null,
+            "ordinal": 2
+          },
+          {
+            "id": 3246853,
+            "category": "Physical Characteristics",
+            "itemList": "{\"ckey\":\"Installation\",\"cvalue\":[\"DIN-rail mounting\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"N\",\"cvalue2\":[\"DIN-rail mounting\"],\"cseparator\":\"\"}",
+            "htmlTable": null,
+            "ordinal": 61
+          },
+          {
+            "id": 3246856,
+            "category": "Ethernet Interface",
+            "itemList": "{\"ckey\":\"Total No. of Ports\",\"cvalue\":[\"8\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"N\",\"cvalue2\":[\"8\"],\"cseparator\":\"\"}",
+            "htmlTable": null,
+            "ordinal": 64
+          },
+          {
+            "id": 2880124,
+            "category": "Industrial Protocols",
+            "itemList": "{\"ckey\":\"Select One\",\"cvalue\":[\"Modbus RTU/ASCII Server>>BACnet/IP Client\",\"Modbus TCP Server>>BACnet/IP Client\",\"BACnet/IP Client>>Modbus RTU/ASCII Server\",\"BACnet/IP Client>>Modbus TCP Server\",\"BACnet/IP Client>>Modbus TCP Server (Slave)\",\"BACnet/IP Server>>Modbus TCP Client\",\"Modbus RTU/ASCII Slave>>BACnet/IP Client\",\"Modbus TCP Server (Slave)>>BACnet/IP Client\",\"BACnet/IP Client>>Modbus RTU/ASCII Slave\",\"BACnet/IP Server>>Modbus RTU/ASCII Client\"],\"cformat\":\"M\",\"cdisplay\":\"T\",\"cvisible\":\"N\",\"cvalue2\":[\"Modbus RTU/ASCII Server>>BACnet/IP Client\",\"Modbus TCP Server>>BACnet/IP Client\",\"BACnet/IP Client>>Modbus RTU/ASCII Server\",\"BACnet/IP Client>>Modbus TCP Server\",\"BACnet/IP Client>>Modbus TCP Server (Slave)\",\"BACnet/IP Server>>Modbus TCP Client\",\"Modbus RTU/ASCII Slave>>BACnet/IP Client\",\"Modbus TCP Server (Slave)>>BACnet/IP Client\",\"BACnet/IP Client>>Modbus RTU/ASCII Slave\",\"BACnet/IP Server>>Modbus RTU/ASCII Client\"],\"cseparator\":\"Comma\"}",
+            "htmlTable": null,
+            "ordinal": 83
+          }
+        ],
+        "accessories": [
+          {
+            "modelId": "M100001039",
+            "a1Category": "SFP Modules"
+          }
+        ]
+      },
+      {
+        "modelId": "M000000914",
+        "modelName": "EDS-4008-LV-T",
+        "description": "2026-07-31 02:53:32.561 Managed Ethernet switch with 8 10/100BaseT(X) ports, dual power supply 12/24/48 VDC, -40 to 75°C operating temperature",
+        "status": "P6",
+        "createDate": "2019-11-18 06:06:40.000",
+        "updateDate": "2026-07-31 02:53:32.561",
+        "creator": "Administrator",
+        "updater": "Administrator",
+        "disabled": "N",
+        "salesCountry": "ALL",
+        "passC5Date": "2022-02-14 16:00:00.0000000 +00:00",
+        "attachments": [
+          {
+            "id": 54601,
+            "supportOs": null,
+            "type": "IMAGE",
+            "subType": "MODEL",
+            "name": "Image for EDS-4008-LV-T",
+            "version": null,
+            "releaseHistory": null,
+            "releaseDate": "2021-12-12 16:00:00.0000000 +00:00",
+            "ordinal": 1,
+            "createDate": "2022-02-15 14:10:42.420",
+            "disabled": "N",
+            "attachmentId": "0000355498",
+            "checksum": "bdeb3f1964925e42c648e6f86ed43471a67abc0343b7d8387dc33e72b17365e2d2b07298c975fb2a43e6522603aef780c1c6d99ad1739588379f3839ad625d24",
+            "damAsset": {
+              "assetId": "64cb3376d447c0c03dd364e6cd6b01345ecab132",
+              "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=64cb3376d447c0c03dd364e6cd6b01345ecab132"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "id": 3246859,
+            "category": "Ethernet Interface",
+            "itemList": "{\"ckey\":\"10/100BaseT(X) Ports (RJ45 connector)\",\"cvalue\":[\"10\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"10\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cseparator\":\"NewLine\"}",
+            "htmlTable": null,
+            "ordinal": 1
+          },
+          {
+            "id": 3246897,
+            "category": "Physical Characteristics",
+            "itemList": "{\"ckey\":\"Installation\",\"cvalue\":[\"DIN-rail mounting\",\"Wall mounting (with optional kit)\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"DIN-rail mounting\",\"Wall mounting (with optional kit)\"],\"cseparator\":\"NewLine\"}",
+            "htmlTable": null,
+            "ordinal": 2
+          },
+          {
+            "id": 3246919,
+            "category": "Physical Characteristics",
+            "itemList": "{\"ckey\":\"Installation\",\"cvalue\":[\"DIN-rail mounting\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"N\",\"cvalue2\":[\"DIN-rail mounting\"],\"cseparator\":\"\"}",
+            "htmlTable": null,
+            "ordinal": 61
+          },
+          {
+            "id": 3246922,
+            "category": "Ethernet Interface",
+            "itemList": "{\"ckey\":\"Total No. of Ports\",\"cvalue\":[\"10\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"N\",\"cvalue2\":[\"10\"],\"cseparator\":\"\"}",
+            "htmlTable": null,
+            "ordinal": 64
+          },
+          {
+            "id": 2880125,
+            "category": "Industrial Protocols",
+            "itemList": "{\"ckey\":\"Select One\",\"cvalue\":[\"Modbus RTU/ASCII Server>>BACnet/IP Client\",\"BACnet/IP Client>>Modbus RTU/ASCII Server\"],\"cformat\":\"M\",\"cdisplay\":\"T\",\"cvisible\":\"N\",\"cvalue2\":[\"Modbus RTU/ASCII Server>>BACnet/IP Client\",\"BACnet/IP Client>>Modbus RTU/ASCII Server\"],\"cseparator\":\"Comma\"}",
+            "htmlTable": null,
+            "ordinal": 84
+          }
+        ],
+        "accessories": null
+      },
+      {
+        "modelId": "M000000914",
+        "modelName": "EDS-4008-LV-T",
+        "description": "2026-07-31 02:53:32.561 Managed Ethernet switch with 8 10/100BaseT(X) ports, dual power supply 12/24/48 VDC, -40 to 75°C operating temperature",
+        "status": "P6",
+        "createDate": "2019-11-18 06:06:40.000",
+        "updateDate": "2026-07-31 02:53:32.561",
+        "creator": "Administrator",
+        "updater": "Administrator",
+        "disabled": "N",
+        "salesCountry": "ALL",
+        "passC5Date": "2022-02-14 16:00:00.0000000 +00:00",
+        "attachments": [
+          {
+            "id": 54606,
+            "supportOs": null,
+            "type": "IMAGE",
+            "subType": "MODEL",
+            "name": "Image for EDS-4008-HV",
+            "version": null,
+            "releaseHistory": null,
+            "releaseDate": "2021-12-12 16:00:00.0000000 +00:00",
+            "ordinal": 1,
+            "createDate": "2022-02-15 14:10:42.420",
+            "disabled": "N",
+            "attachmentId": "0000355499",
+            "checksum": "bdeb3f1964925e42c648e6f86ed43471a67abc0343b7d8387dc33e72b17365e2d2b07298c975fb2a43e6522603aef780c1c6d99ad1739588379f3839ad625d24",
+            "damAsset": {
+              "assetId": "f346f9fc53dfa763728af071d6caee7fc20a8796",
+              "assetPublicUrl": "https://esource-stg.moxa.com/adaptivemedia/rendition?id=f346f9fc53dfa763728af071d6caee7fc20a8796"
+            }
+          }
+        ],
+        "specs": [
+          {
+            "id": 3246925,
+            "category": "Ethernet Interface",
+            "itemList": "{\"ckey\":\"10/100BaseT(X) Ports (RJ45 connector)\",\"cvalue\":[\"12\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"12\",\"Auto negotiation speed\",\"Full/Half duplex mode\",\"Auto MDI/MDI-X connection\"],\"cseparator\":\"NewLine\"}",
+            "htmlTable": null,
+            "ordinal": 1
+          },
+          {
+            "id": 3246963,
+            "category": "Physical Characteristics",
+            "itemList": "{\"ckey\":\"Installation\",\"cvalue\":[\"Tranditional-rail mounting\",\"Wall mounting\"],\"cformat\":\"M\",\"cdisplay\":\"S\",\"cvisible\":\"Y\",\"cvalue2\":[\"Tranditional-rail mounting\",\"Wall mounting\"],\"cseparator\":\"NewLine\"}",
+            "htmlTable": null,
+            "ordinal": 2
+          },
+          {
+            "id": 3246983,
+            "category": "Physical Characteristics",
+            "itemList": "{\"ckey\":\"Installation\",\"cvalue\":[\"Tranditional-rail mounting\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"N\",\"cvalue2\":[\"Tranditional-rail mounting\"],\"cseparator\":\"\"}",
+            "htmlTable": null,
+            "ordinal": 61
+          },
+          {
+            "id": 3246986,
+            "category": "Ethernet Interface",
+            "itemList": "{\"ckey\":\"Total No. of Ports\",\"cvalue\":[\"12\"],\"cformat\":\"S\",\"cdisplay\":\"S\",\"cvisible\":\"N\",\"cvalue2\":[\"12\"],\"cseparator\":\"\"}",
+            "htmlTable": null,
+            "ordinal": 64
+          }
+        ],
+        "accessories": null
+      }
+    ]
+  },
+  "success": true,
+  "message": null
+}

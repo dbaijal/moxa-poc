@@ -2,6 +2,9 @@ const API_BASE = 'https://moxaservicepoc-e8eqb0fjd4gud0fm.a02.azurefd.net';
 const API_KEY = 'moxaXadobe_#p#o#c';
 const DEFAULT_SERIES_ID = 'S000000521';
 
+// Toggle data source: true calls the real API, false loads the bundled mock-data.json.
+const USE_REAL_API = false;
+
 function cellText(cell) {
   return cell ? cell.textContent.trim() : '';
 }
@@ -14,13 +17,24 @@ function parseItemList(itemList) {
   }
 }
 
-async function fetchSeries(seriesId) {
+async function fetchFromApi(seriesId) {
   const resp = await fetch(`${API_BASE}/last/${seriesId}`, {
     method: 'GET',
     headers: { 'X-API-KEY': API_KEY },
   });
   if (!resp.ok) throw new Error(`Request failed with status ${resp.status}`);
-  const json = await resp.json();
+  return resp.json();
+}
+
+async function fetchFromMock() {
+  const url = new URL('./mock-data.json', import.meta.url);
+  const resp = await fetch(url);
+  if (!resp.ok) throw new Error(`Request failed with status ${resp.status}`);
+  return resp.json();
+}
+
+async function fetchSeries(seriesId) {
+  const json = USE_REAL_API ? await fetchFromApi(seriesId) : await fetchFromMock();
   if (!json.success) throw new Error(json.message || 'Request was not successful');
   return json.data;
 }
