@@ -669,6 +669,25 @@
     ]
   },
   {
+    "id": "product-listing",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Heading",
+        "value": "Available Models"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "seriesId",
+        "label": "Series ID",
+        "value": "S000000521"
+      }
+    ]
+  },
+  {
     "id": "product-model",
     "fields": [
       {

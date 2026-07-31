@@ -74,7 +74,8 @@
         "product-resource",
         "product-model",
         "series-card",
-        "request-info-form"
+        "request-info-form",
+        "product-listing"
       ]
     }
   ]
