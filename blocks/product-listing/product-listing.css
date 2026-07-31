@@ -207,6 +207,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #333;
+  font-size: 1.2em;
 }
 
 .product-listing-cards {
@@ -220,6 +221,8 @@
   background-color: #fff;
   border-left: 4px solid #008787;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 8%);
+  display: flex;
+  gap: 32px;
 }
 
 .product-listing-card.is-hidden {
@@ -227,9 +230,12 @@
 }
 
 .product-listing-card-title {
+  font-size: 18px;
   margin: 0 0 8px;
   color: #008787;
   font-weight: 700;
+  flex-shrink: 0;
+  min-width: 250px;
 }
 
 .product-listing-card-description {

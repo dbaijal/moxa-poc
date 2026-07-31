@@ -9,6 +9,10 @@ function cellText(cell) {
   return cell ? cell.textContent.trim() : '';
 }
 
+function formatFilterLabel(value) {
+  return value.includes('>>') ? value.split('>>').pop() : value;
+}
+
 function parseItemList(itemList) {
   try {
     return JSON.parse(itemList);
@@ -195,7 +199,7 @@ function buildSelectFilter(entry, onChange) {
   [...entry.values].sort().forEach((value) => {
     const option = document.createElement('option');
     option.value = value;
-    option.textContent = value;
+    option.textContent = formatFilterLabel(value);
     select.append(option);
   });
 
@@ -231,7 +235,7 @@ function buildCheckboxFilter(entry, onChange) {
     input.addEventListener('change', onChange);
 
     const text = document.createElement('span');
-    text.textContent = value;
+    text.textContent = formatFilterLabel(value);
 
     item.append(input, text);
     wrapper.append(item);
