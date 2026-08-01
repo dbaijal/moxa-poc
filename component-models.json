@@ -1058,6 +1058,60 @@
     ]
   },
   {
+    "id": "video-article",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "value": "Making Digital the New Current"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "entryId",
+        "label": "Entry ID",
+        "value": "1_hzjhw3tc"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "date",
+        "label": "Date",
+        "value": "Apr 09, 2026"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "facebookUrl",
+        "label": "Facebook Share URL",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "twitterUrl",
+        "label": "Twitter Share URL",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkedinUrl",
+        "label": "LinkedIn Share URL",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "video-teaser",
     "fields": [
       {
