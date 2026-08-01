@@ -1,3 +1,8 @@
+.video-article.block {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
 .video-article-inner {
   max-width: 1200px;
   margin: 0 auto;

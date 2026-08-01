@@ -12,40 +12,30 @@ function buildThumbnailUrl(entryId) {
   return `https://cdnapisec.kaltura.com/p/${KALTURA_PARTNER_ID}/sp/${KALTURA_SUBPARTNER_ID}/thumbnail/entry_id/${entryId}/width/1200`;
 }
 
-let kalturaScriptPromise;
-function loadKalturaScript() {
-  if (window.kWidget) return Promise.resolve();
-  if (!kalturaScriptPromise) {
-    kalturaScriptPromise = new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = `https://cdnapisec.kaltura.com/p/${KALTURA_PARTNER_ID}/sp/${KALTURA_SUBPARTNER_ID}/embedIframeJs/uiconf_id/${KALTURA_UICONF_ID}/partner_id/${KALTURA_PARTNER_ID}`;
-      script.addEventListener('load', () => resolve());
-      script.addEventListener('error', () => reject(new Error('Failed to load the Kaltura player script')));
-      document.head.append(script);
-    });
-  }
-  return kalturaScriptPromise;
+// Kaltura's JS-driven embed (kWidget.embed / the mwEmbed loader) injects its
+// own inline <script> tags at runtime, which this site's nonce-based CSP
+// (script-src 'nonce-aem' 'strict-dynamic' ...) blocks. A plain <iframe>
+// pointing at Kaltura's own iframe-embed URL avoids that entirely: the
+// player runs inside its own cross-origin document, governed by Kaltura's
+// CSP, not ours, so no inline script ever needs to execute on this page.
+function buildKalturaIframeSrc(entryId) {
+  const params = new URLSearchParams({
+    iframeembed: 'true',
+    playerId: 'kaltura_player',
+    entry_id: entryId,
+  });
+  return `https://cdnapisec.kaltura.com/p/${KALTURA_PARTNER_ID}/sp/${KALTURA_SUBPARTNER_ID}/embedIframeJs/uiconf_id/${KALTURA_UICONF_ID}/partner_id/${KALTURA_PARTNER_ID}?${params.toString()}`;
 }
 
-async function loadKalturaPlayer(mediaEl, entryId) {
-  const containerId = `video-article-player-${Math.random().toString(36).slice(2)}`;
-  const container = document.createElement('div');
-  container.id = containerId;
-  container.className = 'video-article-player';
-  mediaEl.replaceChildren(container);
-
-  try {
-    await loadKalturaScript();
-    window.kWidget.embed({
-      targetId: containerId,
-      wid: `_${KALTURA_PARTNER_ID}`,
-      uiconf_id: KALTURA_UICONF_ID,
-      flashvars: {},
-      entry_id: entryId,
-    });
-  } catch {
-    mediaEl.textContent = 'Unable to load the video right now.';
-  }
+function loadKalturaPlayer(mediaEl, entryId) {
+  const iframe = document.createElement('iframe');
+  iframe.className = 'video-article-player';
+  iframe.src = buildKalturaIframeSrc(entryId);
+  iframe.title = 'Video player';
+  iframe.frameBorder = '0';
+  iframe.allowFullscreen = true;
+  iframe.setAttribute('allow', 'autoplay *; fullscreen *; encrypted-media *');
+  mediaEl.replaceChildren(iframe);
 }
 
 function buildVideoMedia(entryId) {
