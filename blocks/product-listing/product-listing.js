@@ -149,6 +149,23 @@ function buildRangeFilter(entry, onChange) {
     onChange();
   });
 
+  // The two range inputs sit stacked on top of each other so both thumbs share
+  // one track. When their values are equal (or close), whichever thumb is on
+  // top would swallow every click and the other becomes unreachable. Raise
+  // whichever thumb is closer to the pointer so it stays grabbable.
+  const bringClosestThumbToFront = (clientX) => {
+    const rect = track.getBoundingClientRect();
+    if (!rect.width) return;
+    const ratio = Math.min(Math.max((clientX - rect.left) / rect.width, 0), 1);
+    const hoverValue = min + ratio * (max - min);
+    const isMinCloser = Math.abs(hoverValue - Number(minInput.value))
+      <= Math.abs(hoverValue - Number(maxInput.value));
+    minInput.style.zIndex = isMinCloser ? '2' : '1';
+    maxInput.style.zIndex = isMinCloser ? '1' : '2';
+  };
+  track.addEventListener('pointermove', (event) => bringClosestThumbToFront(event.clientX));
+  track.addEventListener('pointerdown', (event) => bringClosestThumbToFront(event.clientX));
+
   track.append(minInput, maxInput);
 
   const scaleRow = document.createElement('div');
