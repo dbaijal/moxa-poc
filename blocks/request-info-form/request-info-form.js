@@ -274,11 +274,24 @@ function buildField(field) {
   }
 }
 
-async function loadFields() {
-  const url = new URL('./mock-form.json', import.meta.url);
+function parseOptions(raw) {
+  if (!raw) return [];
   try {
-    const resp = await fetch(url);
-    return resp.ok ? await resp.json() : [];
+    return JSON.parse(raw);
+  } catch {
+    return [];
+  }
+}
+
+async function loadFields() {
+  try {
+    const resp = await fetch('/en/form.json');
+    if (!resp.ok) return [];
+    const json = await resp.json();
+    return (json.data || []).map((field) => ({
+      ...field,
+      options: parseOptions(field.options),
+    }));
   } catch {
     return [];
   }

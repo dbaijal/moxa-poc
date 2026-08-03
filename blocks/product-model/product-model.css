@@ -76,9 +76,13 @@
     &:first-child {
       font-size: 18px;
 
-      td {
+      td, a {
         color: #008787;
         font-weight: 700;
+      }
+
+      td  {
+        min-width: 200px;
       }
     }
 
