@@ -1,42 +1,126 @@
+.accordion {
+  --accordion-accent: #008787;
+  --accordion-accent-dark: #006d6d;
+  --accordion-border: #e0e0e0;
+  --accordion-hover-bg: #f8f8f8;
+}
+
 .accordion .accordion-item {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--accordion-border);
 }
 
 .accordion .accordion-item:first-child {
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--accordion-border);
 }
 
+/* question / summary row */
 .accordion .accordion-item-label {
   position: relative;
-  padding: 16px 40px 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 20px 52px 20px 8px;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xs);
   font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-color);
   cursor: pointer;
   list-style: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-/* hide the native disclosure triangle */
+/* hide the native disclosure marker (Safari + others) */
 .accordion .accordion-item-label::-webkit-details-marker {
   display: none;
 }
 
+.accordion .accordion-item-label::marker {
+  content: '';
+}
+
+.accordion .accordion-item-label:hover {
+  color: var(--accordion-accent);
+  background-color: var(--accordion-hover-bg);
+}
+
+/* keyboard focus */
+.accordion .accordion-item-label:focus-visible {
+  outline: 2px solid var(--accordion-accent);
+  outline-offset: -2px;
+}
+
+/* plus icon that rotates into a close (x) when open */
 .accordion .accordion-item-label::after {
   content: '+';
   position: absolute;
   top: 50%;
-  right: 8px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  color: var(--accordion-accent);
   transform: translateY(-50%);
-  font-size: 1.5rem;
-  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.accordion .accordion-item[open] .accordion-item-label {
+  color: var(--accordion-accent-dark);
 }
 
 .accordion .accordion-item[open] .accordion-item-label::after {
-  content: '\2013'; /* en dash */
+  transform: translateY(-50%) rotate(45deg);
 }
 
+/* answer / body */
 .accordion .accordion-item-body {
-  padding: 0 0 16px;
+  max-width: 780px;
+  padding: 0 8px 22px;
+  font-size: var(--body-font-size-xs);
+  line-height: 1.65;
+  color: var(--dark-color);
+  animation: accordion-reveal 0.3s ease;
 }
 
 .accordion .accordion-item-body > :first-child {
   margin-top: 0;
+}
+
+.accordion .accordion-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion .accordion-item-body a {
+  color: var(--link-color);
+}
+
+.accordion .accordion-item-body a:hover {
+  color: var(--link-hover-color);
+}
+
+@keyframes accordion-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (width >= 600px) {
+  .accordion .accordion-item-label {
+    padding: 24px 60px 24px 12px;
+    font-size: var(--heading-font-size-s);
+  }
+
+  .accordion .accordion-item-body {
+    padding: 0 12px 26px;
+  }
 }
