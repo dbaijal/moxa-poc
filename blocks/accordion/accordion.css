@@ -3,6 +3,11 @@
   --accordion-accent-dark: #006d6d;
   --accordion-border: #e0e0e0;
   --accordion-hover-bg: #f8f8f8;
+
+  /* constrain and center like article content */
+  max-width: 968px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .accordion .accordion-item {
