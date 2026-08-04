@@ -1,0 +1,42 @@
+.accordion .accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion .accordion-item:first-child {
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordion .accordion-item-label {
+  position: relative;
+  padding: 16px 40px 16px 0;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+/* hide the native disclosure triangle */
+.accordion .accordion-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion .accordion-item-label::after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.accordion .accordion-item[open] .accordion-item-label::after {
+  content: '\2013'; /* en dash */
+}
+
+.accordion .accordion-item-body {
+  padding: 0 0 16px;
+}
+
+.accordion .accordion-item-body > :first-child {
+  margin-top: 0;
+}
