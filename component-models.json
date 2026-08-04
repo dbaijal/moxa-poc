@@ -170,6 +170,47 @@
     ]
   },
   {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Type",
+        "description": "Choose FAQ to render as a frequently-asked-questions section and add schema.org FAQPage structured data for SEO.",
+        "value": "",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "FAQ (adds SEO schema)",
+            "value": "faq"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-entry",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Question / Label"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Answer / Content",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "article-header",
     "fields": [
       {
