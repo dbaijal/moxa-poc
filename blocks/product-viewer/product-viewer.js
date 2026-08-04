@@ -2,9 +2,11 @@ function rowText(el) {
   return el ? el.textContent.trim().replace(/\s+/g, ' ') : '';
 }
 
-function cellUrl(el) {
-  const img = el.querySelector('img');
-  return img ? img.src : el.textContent.trim().replace(/\s+/g, ' ');
+function pictureUrls(row) {
+  return [...(row?.querySelectorAll('picture') || [])]
+    .map((picture) => picture.querySelector('img'))
+    .filter(Boolean)
+    .map((img) => img.src);
 }
 
 function filenameOf(url) {
@@ -133,9 +135,7 @@ export default async function decorate(block) {
   const [featuresRow, imagesRow, certHeadingRow, certImagesRow] = block.children;
 
   // product image gallery
-  const imageUrls = [...(imagesRow?.firstElementChild?.children || [])]
-    .map(cellUrl)
-    .filter(Boolean);
+  const imageUrls = pictureUrls(imagesRow);
 
   const detailContainer = document.createElement('div');
   const thumbList = document.createElement('ul');
@@ -144,8 +144,19 @@ export default async function decorate(block) {
   imageUrls.forEach((url, i) => {
     const index = i + 1;
     const isActive = i === 0;
-    detailContainer.append(buildImagePanel(url, index, isActive));
-    thumbList.append(buildThumb(url, index, isActive));
+    const panel = buildImagePanel(url, index, isActive);
+    const thumb = buildThumb(url, index, isActive);
+    detailContainer.append(panel);
+    thumbList.append(thumb);
+
+    thumb.addEventListener('click', () => {
+      detailContainer.querySelectorAll('.showcase-block__detail--container.is-active')
+        .forEach((el) => el.classList.remove('is-active'));
+      thumbList.querySelectorAll('.showcase-block__item.is-active')
+        .forEach((el) => el.classList.remove('is-active'));
+      panel.classList.add('is-active');
+      thumb.classList.add('is-active');
+    });
   });
 
   const showcaseWrap = document.createElement('div');
@@ -179,10 +190,8 @@ export default async function decorate(block) {
 
   const certList = document.createElement('ul');
   certList.className = 'certifications-block';
-  [...(certImagesRow?.firstElementChild?.children || [])]
-    .map(cellUrl)
-    .filter(Boolean)
-    .forEach((url) => certList.append(buildCertificationItem(url)));
+
+  pictureUrls(certImagesRow).forEach((url) => certList.append(buildCertificationItem(url)));
 
   const quoteBtn = document.createElement('button');
   quoteBtn.type = 'button';
