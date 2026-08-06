@@ -348,8 +348,7 @@
       {
         "component": "aem-content",
         "name": "reference",
-        "label": "Reference",
-        "rootPath": "/content/moxa-poc/en/fragments"
+        "label": "Reference"
       }
     ]
   },
@@ -726,6 +725,13 @@
         "name": "seriesId",
         "label": "Series ID",
         "value": "S000000521"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "apiEndpoint",
+        "label": "API Endpoint",
+        "value": "https://moxaservicepoc-e8eqb0fjd4gud0fm.a02.azurefd.net/last/S000000521"
       },
       {
         "component": "boolean",

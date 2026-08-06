@@ -35,6 +35,13 @@
           "value": "S000000521"
         },
         {
+          "component": "text",
+          "valueType": "string",
+          "name": "apiEndpoint",
+          "label": "API Endpoint",
+          "value": "https://moxaservicepoc-e8eqb0fjd4gud0fm.a02.azurefd.net/last/S000000521"
+        },
+        {
           "component": "boolean",
           "valueType": "boolean",
           "name": "useRealApi",

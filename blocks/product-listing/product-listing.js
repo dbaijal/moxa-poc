@@ -1,6 +1,5 @@
-const API_BASE = 'https://moxaservicepoc-e8eqb0fjd4gud0fm.a02.azurefd.net';
 const API_KEY = 'moxaXadobe_#p#o#c';
-const DEFAULT_SERIES_ID = 'S000000521';
+const DEFAULT_API_ENDPOINT = 'https://moxaservicepoc-e8eqb0fjd4gud0fm.a02.azurefd.net/last/S000000521';
 
 function cellText(cell) {
   return cell ? cell.textContent.trim() : '';
@@ -18,8 +17,8 @@ function parseItemList(itemList) {
   }
 }
 
-async function fetchFromApi(seriesId) {
-  const resp = await fetch(`${API_BASE}/last/${seriesId}`, {
+async function fetchFromApi(apiEndpoint) {
+  const resp = await fetch(apiEndpoint, {
     method: 'GET',
     headers: { 'X-API-KEY': API_KEY },
   });
@@ -34,8 +33,8 @@ async function fetchFromMock() {
   return resp.json();
 }
 
-async function fetchSeries(seriesId, useRealApi) {
-  const json = useRealApi ? await fetchFromApi(seriesId) : await fetchFromMock();
+async function fetchSeries(apiEndpoint, useRealApi) {
+  const json = useRealApi ? await fetchFromApi(apiEndpoint) : await fetchFromMock();
   if (!json.success) throw new Error(json.message || 'Request was not successful');
   return json.data;
 }
@@ -303,9 +302,9 @@ function buildAccordionSection(category, controls) {
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
-  const [headingRow, seriesIdRow, useRealApiRow] = block.children;
+  const [headingRow, , apiEndpointRow, useRealApiRow] = block.children;
   const headingText = cellText(headingRow) || 'Available Models';
-  const seriesId = cellText(seriesIdRow) || DEFAULT_SERIES_ID;
+  const apiEndpoint = cellText(apiEndpointRow) || DEFAULT_API_ENDPOINT;
   const useRealApi = cellText(useRealApiRow).toLowerCase() === 'true';
 
   const status = document.createElement('p');
@@ -319,7 +318,7 @@ export default async function decorate(block) {
 
   let data;
   try {
-    data = await fetchSeries(seriesId, useRealApi);
+    data = await fetchSeries(apiEndpoint, useRealApi);
   } catch {
     status.textContent = 'Unable to load product models right now. Please try again later.';
     status.classList.add('is-error');
