@@ -2,9 +2,6 @@ const API_BASE = 'https://moxaservicepoc-e8eqb0fjd4gud0fm.a02.azurefd.net';
 const API_KEY = 'moxaXadobe_#p#o#c';
 const DEFAULT_SERIES_ID = 'S000000521';
 
-// Toggle data source: true calls the real API, false loads the bundled mock-data.json.
-const USE_REAL_API = false;
-
 function cellText(cell) {
   return cell ? cell.textContent.trim() : '';
 }
@@ -37,8 +34,8 @@ async function fetchFromMock() {
   return resp.json();
 }
 
-async function fetchSeries(seriesId) {
-  const json = USE_REAL_API ? await fetchFromApi(seriesId) : await fetchFromMock();
+async function fetchSeries(seriesId, useRealApi) {
+  const json = useRealApi ? await fetchFromApi(seriesId) : await fetchFromMock();
   if (!json.success) throw new Error(json.message || 'Request was not successful');
   return json.data;
 }
@@ -306,9 +303,10 @@ function buildAccordionSection(category, controls) {
  * @param {Element} block The block element
  */
 export default async function decorate(block) {
-  const [headingRow, seriesIdRow] = block.children;
+  const [headingRow, seriesIdRow, useRealApiRow] = block.children;
   const headingText = cellText(headingRow) || 'Available Models';
   const seriesId = cellText(seriesIdRow) || DEFAULT_SERIES_ID;
+  const useRealApi = cellText(useRealApiRow).toLowerCase() === 'true';
 
   const status = document.createElement('p');
   status.className = 'product-listing-status';
@@ -321,7 +319,7 @@ export default async function decorate(block) {
 
   let data;
   try {
-    data = await fetchSeries(seriesId);
+    data = await fetchSeries(seriesId, useRealApi);
   } catch {
     status.textContent = 'Unable to load product models right now. Please try again later.';
     status.classList.add('is-error');
@@ -334,8 +332,25 @@ export default async function decorate(block) {
     return;
   }
 
+  const headingWrapper = document.createElement('div');
+  headingWrapper.className = 'product-listing-heading-wrapper';
+
   const heading = document.createElement('h2');
   heading.className = 'product-listing-heading';
+
+  const exportBtn = document.createElement('button');
+  exportBtn.type = 'button';
+  exportBtn.className = 'product-listing-export';
+  const exportIcon = document.createElement('img');
+  exportIcon.src = '/icons/print.svg';
+  exportIcon.alt = 'PDF Icon';
+  exportBtn.append(exportIcon);
+  const exportText = document.createElement('span');
+  exportText.textContent = 'Export to PDF';
+  exportBtn.append(exportText);
+  exportBtn.addEventListener('click', () => window.print());
+
+  headingWrapper.append(heading, exportBtn);
 
   const cardsWrap = document.createElement('div');
   cardsWrap.className = 'product-listing-cards';
@@ -388,7 +403,7 @@ export default async function decorate(block) {
 
   const main = document.createElement('div');
   main.className = 'product-listing-main';
-  main.append(heading, cardsWrap);
+  main.append(headingWrapper, cardsWrap);
 
   inner.replaceChildren(sidebar, main);
   applyFilters();

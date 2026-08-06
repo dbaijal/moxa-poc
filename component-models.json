@@ -725,6 +725,13 @@
         "name": "seriesId",
         "label": "Series ID",
         "value": "S000000521"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "useRealApi",
+        "label": "Use Real API",
+        "value": true
       }
     ]
   },

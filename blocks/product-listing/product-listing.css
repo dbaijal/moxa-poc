@@ -202,7 +202,6 @@
 }
 
 .product-listing-heading {
-  margin: 0 0 24px;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -241,6 +240,27 @@
 .product-listing-card-description {
   margin: 0;
   color: #333;
+}
+
+.product-listing-heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 24px;
+}
+
+.product-listing-export {
+  display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: #484848;
+    text-align: left;
+    font-size: 14px;
 }
 
 @media (width >= 900px) {
