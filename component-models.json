@@ -348,7 +348,8 @@
       {
         "component": "aem-content",
         "name": "reference",
-        "label": "Reference"
+        "label": "Reference",
+        "rootPath": "/content/moxa-poc/en/fragments"
       }
     ]
   },
